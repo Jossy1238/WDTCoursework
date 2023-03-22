@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous"/>
+
+    <!-- *******  Font Awesome Icons Link  ******* -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+  <!-- *******  Owl Carousel Links  ******* -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
+
+
+    <link href="../CSS/index.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+      <section class="header">
+        <nav class="navbar">
+            <a href="../HTML/index.html"> <img src="../Images/Logo.png"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../HTML/index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../HTML/aboutus.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../HTML/countries.html" class="nav-link">Countries</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../HTML/costofliving.html" class="nav-link">Cost of Living</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+        
+      </section>
+      <!-- Page introduction-->
+      <!-- <section class="split-section">
+        <div class="text-container">
+          <h2>Section Title</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit. 
+            Duis hendrerit sagittis nunc, a sollicitudin felis laoreet quis. Integer imperdiet, velit quis elementum efficitur, arcu ipsum fermentum magna, 
+            vitae faucibus augue enim eget libero.</p>
+            <button class="main__btn"><a href="../HTML/aboutus.html">Read More</a></button>
+        </div>
+        <div class="image-container">
+          <img src="../Images/Facts-about-Africa.webp" alt="image">
+          <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_m4wmgweb.json"  
+          background="transparent"
+          speed="1"
+          style="width: 300px; height: 300px;"
+          loop controls 
+          autoplay></lottie-player>
+        </div>
+      </section> -->
+
+
+
+
+      <!-- Home section -->
+      <section class="home" id="home">
+        <div class="home-test">
+          <span>Welcome To</span>
+          <h1>Cost of Living Comparison Website</h1>
+          <h2>Explore our resources! <br>to make informed financial decisions...</h2>
+          <a href="../HTML/aboutTheWebsite.html" class="btn">Read More</a>
+        </div>
+        <div class="home-img">
+          <img src="../Images/Data-Analytics-removebg-preview.png" class="home_img1">
+
+        </div>
+
+      </section>
+
+
+      <!--Information section-->
+      <section id="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card_area">
+                <div class="single-card">
+                  <h2>01</h2>
+                  <!-- <h3>Card One</h3> -->
+                  <p>Discover the minds behind our comprehensive cost-of-living comparisons.
+                    We are committed to providing different country's accurate and up-to-date information 
+                    that is easy to access and understand.</p>
+                    <a href="../HTML/aboutus.html" class="btn card_btn1">Discover</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card_area">
+                <div class="single-card">
+                  <h2>02</h2>
+                  <!-- <h3>Card Two</h3> -->
+                  <p>Get to know your destination in more detail. 
+                    Click here to learn about the language, longitude, 
+                    and other essential information about your country of interest. 
+                    With our comprehensive data, you can gain a better understanding of the culture. 
+                    </p>
+                    <a href="../HTML/countries.html" class="btn card_btn2">Know More</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card_area">
+                <div class="single-card">
+                  <h2>03</h2>
+                  <!-- <h3>Card Three</h3> -->
+                  <p>Ready to explore the world? Click here to compare two  
+                    countries and get detailed information about their cost of living. 
+                    Our platform makes it easy to compare expenses, so you can plan 
+                    your next adventure with confidence.</p>
+                    <a href="../HTML/costofliving.html" class="btn card_btn3">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="testimonials-section">
+        <!-- Section Header Starts -->
+        <div class="section-header">
+          <h1>What Clients Say</h1>
+        </div>
+        <!-- Section Header Ends -->
+      
+        <!-- Owl Carousel Slider Starts -->
+        <div class="owl-carousel owl-theme testimonials-container">
+          <!-- Item1 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Cost of living research</h2>
+                </div>
+                <p>I recently used this comparison website to research 
+                  the cost of living in different cities and countries, 
+                  and it was a game-changer. The site was user-friendly, 
+                  and the data provided was accurate and reliable. 
+                  I was able to compare prices for housing, 
+                  transportation, groceries, and other essentials, 
+                  which helped me make informed financial decisions.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/pic1.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Pelumi Racheal</span>
+                  <span>Musician</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item1 Ends -->
+      
+            <!-- Item2 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Planning a move</h2>
+                </div>
+                <p>I used this website to plan my move to a new city, and it was incredibly helpful. 
+                  The site provided detailed information about the cost of living in my desired location, 
+                  including housing, transportation, 
+                  and utilities. I was able to create a budget that allowed me to live comfortably and within my means.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/pic2.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Jonathan Yav</span>
+                  <span>Pastor</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item2 Ends -->
+      
+            <!-- Item3 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Travel exploration</h2>
+                </div>
+                <p>As a frequent traveler, I always use this comparison website to research the cost of living in different countries. 
+                  The site is easy to use, and the data is up-to-date and accurate. 
+                  I appreciate the comprehensive information provided, 
+                  which helps me make informed decisions about where to go and how to budget my expenses.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/pic3.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Osemwonyemwen Ekhator</span>
+                  <span>Nurse</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item3 Ends -->
+      
+            <!-- Item4 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Retirement cost of living</h2>
+                </div>
+                <p>I stumbled upon this comparison website 
+                  when I was researching the cost of living in different cities for my upcoming retirement. 
+                  The site was a goldmine of information, and it helped me plan my budget for the next phase of my life. 
+                  I highly recommend this site to anyone who wants to make informed financial decisions.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/Pics7.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Prof Agbator</span>
+                  <span>Computer Scientist</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item4 Ends -->
+      
+            <!-- Item5 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Global city exploration</h2>
+                </div>
+                <p>This comparison website is a must-visit for anyone who wants to explore different cities and countries around the world. 
+                  The site provides comprehensive data about the cost of living, 
+                  which helps you make informed decisions about where to live or travel. 
+                  I appreciate the user-friendly interface and the accuracy of the data provided.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/pic4.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Evans Odion</span>
+                  <span>Activist</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item5 Ends -->
+      
+            <!-- Item6 Starts -->
+            <div class="item testimonial-card">
+              <main class="test-card-body">
+                <div class="quote">
+                  <i class="fa fa-quote-left"></i>
+                  <h2>Planning a trip</h2>
+                </div>
+                <p>I recently used this website to plan a trip to a new country, 
+                  and I couldn't be happier with the results. 
+                  The site provided detailed information about the cost of living in my desired location, 
+                  including housing, transportation, and food. 
+                  This helped me plan my trip and stay within my budget.</p>
+                <div class="ratings">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </main>
+              <div class="profile">
+                <div class="profile-image">
+                  <img src="../Images/pic5.jpg">
+                </div>
+                <div class="profile-desc">
+                  <span>Goiteone Maikano</span>
+                  <span>Social Scientist</span>
+                </div>
+              </div>
+            </div>
+            <!-- Item6 Ends -->
+      
+          </div>
+        <!-- Owl Carousel Slider Ends -->
+      
+      </div>
+
+      <!-- <section class="three-column-section">
+        <h2 class="section-heading">Three Column Section</h2>
+        <div class="column-container">
+          <h3 class="subheading">Column 1</h3>
+          <div class="image-container">
+            <img src="your-image-1.jpg" alt="Your image 1">
+          </div>
+          <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+        </div>
+        <div class="column-container">
+          <h3 class="subheading">Column 2</h3>
+          <div class="image-container">
+            <img src="your-image-2.jpg" alt="Your image 2">
+          </div>
+          <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+        </div>
+        <div class="column-container">
+          <h3 class="subheading">Column 3</h3>
+        <div class="image-container">
+          <img src="your-image-3.jpg" alt="Your image 3">
+        </div>
+        <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+      </div>
+    </section> -->
+
+    <!-- Three columns sections
+    <section class="section-container">
+      <h2 class="section-heading">Three Column Section</h2>
+      <div class="three-column-container">
+        <div class="column-container">
+          <h3 class="column-heading">Column 1</h3>
+          <div class="image-container">
+            <img src="../Images/africa-facts.jpg" alt="image 1">
+          </div>
+          <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+        </div>
+        <div class="column-container">
+          <h3 class="column-heading">Column 2</h3>
+          <div class="image-container">
+            <img src="../Images/africa.png" alt="image 2">
+          </div>
+          <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+        </div>
+        <div class="column-container">
+          <h3 class="column-heading">Column 3</h3>
+          <div class="image-container">
+            <img src="../Images/Facts-about-Africa.webp" alt="image 3">
+          </div>
+          <p class="write-up">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae sem in turpis euismod commodo. Nulla facilisi. Sed tincidunt commodo enim eu suscipit.</p>
+        </div>
+      </div>
+    </section> -->
+
+
+
+       <!--Campus
+   <section class="campus">
+    <h1>Our Services</h1>
+    <p>Experience our quality and affordable services</p>
+    <div class="row">
+      <div class="campus-col">
+        <img src="../images/hostel/doubleroom1.jpg">
+        <div class="layer">
+          <h3>Lodgings</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="../images/hostel/cafe.jpg">
+        <div class="layer">
+          <h3>Dinning and Bar</h3>
+        </div>
+      </div>
+      <div class="campus-col">
+        <img src="../images/hostel/commonroom.jpg">
+        <div class="layer">
+          <h3>Special Services</h3>
+        </div>
+      </div>
+
+    </div>
+  </section> 
+
+      How are we Section
+     <div class="main" id="about">
+      <div class="main__container">
+       
+        <div class="main__content">
+          <h1>Who are we?</h1>
+          <p>We are known for prompt, dependable, and effective concierge services that provide people and businesses with the advantages and benefits of a personal concierge at a fraction of the price. We are also committed to integrity, convenience, communication, courtesy, and loyalty in all aspects of our operations.</p>
+          <button class="main__btn"><a href="faq.html">Read More</a></button>
+        </div>
+
+        <div class="main__img--container">
+          <div class="main__img--card"><img src="../Images/Facts-about-Africa.webp" alt="NC"></div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="your-image.jpg" alt="Your Image">
+          </div>
+          <div class="col-md-6">
+            <h2>Writeup Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc non libero sollicitudin ultrices in sit amet diam. Nullam malesuada dapibus eleifend. Fusce maximus quam vel augue commodo, ut ullamcorper felis commodo. </p>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- <div class="row">
+        <div class="col">
+          <h1>Jossy Nation</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc non libero sollicitudin ultrices in sit amet diam. 
+            Nullam malesuada dapibus eleifend. Fusce maximus quam vel augue commodo, ut ullamcorper felis commodo. </p>
+        </div>
+        <div class="col">
+          <h1>Jossy Nation</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nunc non libero sollicitudin ultrices in sit amet diam. 
+            Nullam malesuada dapibus eleifend. Fusce maximus quam vel augue commodo, ut ullamcorper felis commodo. </p>
+        </div>
+
+      </div> -->
+
+      <footer>
+        <div class="content">
+          <div class="top">
+            <div class="logo-details">
+              <span class="logo_name">Social media handles</span>
+            </div>
+            <div class="media-icons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="link-boxes">
+            <ul class="box">
+              <li><a href="../HTML/index.html"><img src="../Images/Logo.png"></a></li> 
+            </ul>
+            
+            <ul class="box">
+              <li class="link_name">Quick Links</li>
+              <li><a href="../HTML/index.html">Home</a></li>
+              <li><a href="../HTML/aboutus.html">About Us</a></li>
+              <li><a href="../HTML/countries.html">Countries</a></li>
+              <li><a href="../HTML/costofliving.html">Cost of Living</a></li>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Contact</li>
+              <p>08084315949
+              <br>nccnigeria@gmail.com</p>
+            </ul>
+            <ul class="box">
+              <li class="link_name">Office Address</li>
+              <p>1, Jossy Avenue
+              <br>Off Ekhator Quater
+              <br>Edo State, Nigeria</p>
+            </ul>
+              <ul class="box input-box">
+              <li class="link_name">Subscribe</li>
+              <li><input type="text" placeholder="Enter your email"></li>
+              <li><input type="button" value="Subscribe"></li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom-details">
+          <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023, JNF- All rights reserved</span>
+            <span class="policy_terms">
+              <a href="../HTML/aboutus.html">Made with Love by Jossy Nation</a>
+            </span>
+          </div>
+        </div>
+      </footer>
+
+
+  
+      <!-- Animinated picture for introduction page js Link -->
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+    <!--   *****   Owl Carous js Link  *****  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"></script> 
+  
+      <!--   *****   JQuery Link   *****   -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  
+       <!--   *****   Owl Carousel js Link  *****  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>  
+
+    <!--   *****   Link To Custom Script File   *****   -->
+    <script src="../JAVASCRIPT/index.js"></script>
+     
+</body>
+</html>
