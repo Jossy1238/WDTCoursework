@@ -99,33 +99,19 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
 
 
 /* Js filr for comparing cities*/
-  let firstCountry = document.getElementById("country1");
-  let secondCountry = document.getElementById("country2");
-  let formcompare = document.getElementById("compare-form");
-
-const searchCostOfLiving = (city, country)=>{
-    
-    const options = {
-      method: 'GET',
-      headers: {
-        'X-RapidAPI-Key': '87e772cf14mshb5f9f239a1b4c36p1ac014jsn9c7b7e4bd007',
-        'X-RapidAPI-Host': 'cities-cost-of-living-and-average-prices-api.p.rapidapi.com'
-      }
-    };
-    
-    fetch(`https://cities-cost-of-living-and-average-prices-api.p.rapidapi.com/cost_of_living?country=${country}&city=${city}`, options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
-
-}
-
-searchCostOfLiving("accra", "ghana");
+let firstCountry = document.getElementById("country1");
+let secondCountry = document.getElementById("country2");
+let formcompare = document.getElementById("compare-form");
+let result = document.getElementById("result");
+let loader = document.getElementById("loader");
 
 
 formcompare.addEventListener("submit", async (event) => {
   // prevent form from submitting and refreshing page on submission
   event.preventDefault();
+  loader.classList.remove("d-none");
+  loader.innerHTML=`<h2>Loading...</h2>`;
+
 
   // extract city and country info from input fields
   const countryOne = firstCountry.value.toLowerCase().split("/")[1];
@@ -134,13 +120,74 @@ formcompare.addEventListener("submit", async (event) => {
   const cityTwo = secondCountry.value.toLowerCase().split("/")[0];
 
   // using the fetch function to retrieve data from the two input fields
-  let cityOneData =  searchCostOfLiving(cityOne, countryOne);
-  let cityTwoData =  searchCostOfLiving(cityTwo, countryTwo);
+  let cityOneData = await searchCostOfLiving(cityOne, countryOne); // added await
+  let cityTwoData = await searchCostOfLiving(cityTwo, countryTwo); // added await
 
   console.log(cityOneData);
   console.log(cityTwoData);
+  loader.classList.add("d-none");
+
+  // update the result div
+  result.innerHTML = `
+  <h2>${cityOne}, ${countryOne}</h2>
+  ${await searchCostOfLiving(cityOne, countryOne)}
+  <h2>${cityTwo}, ${countryTwo}</h2>
+  ${await searchCostOfLiving(cityTwo, countryTwo)}
+`;
+
+
 
 });
+
+const searchCostOfLiving = (city, country) => {
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '87e772cf14mshb5f9f239a1b4c36p1ac014jsn9c7b7e4bd007',
+      'X-RapidAPI-Host': 'cities-cost-of-living-and-average-prices-api.p.rapidapi.com'
+    }
+  };
+  
+  return fetch(`https://cities-cost-of-living-and-average-prices-api.p.rapidapi.com/cost_of_living?country=${country}&city=${city}`, options)
+    .then(response => response.json())
+    .then(data => {
+      let result = `
+      <table class="table">
+        <thead>`;
+      for (let key in data) {
+
+        if (data.hasOwnProperty(key)) {
+          console.log(data[key])
+          console.log(typeof data[key] === 'object')
+
+          let computedValue = [];
+
+          if(typeof data[key] === 'object'){
+            computedValue = data[key].map((el)=>`${el.Cost} : ${el.Value}`);
+
+          }
+
+
+          // console.log(computedValue.toString());
+          console.log(computedValue);
+
+
+          result += `
+            <tr>
+              <td>${key}</td>
+              <td>${ typeof data[key] === 'object' ? computedValue.toString() :  data[key]}</td>
+            </tr>
+          `;
+
+
+        }
+      }
+      result += '</table>';
+      return result;
+    })
+    .catch(err => console.error(err));
+};
+
 
 
 
