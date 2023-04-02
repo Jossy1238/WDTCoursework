@@ -109,6 +109,7 @@ let loader = document.getElementById("loader");
 formcompare.addEventListener("submit", async (event) => {
   // prevent form from submitting and refreshing page on submission
   event.preventDefault();
+  result.classList.add("d-none");
   loader.classList.remove("d-none");
   loader.innerHTML=`<h2>Loading...</h2>`;
 
@@ -123,16 +124,26 @@ formcompare.addEventListener("submit", async (event) => {
   let cityOneData = await searchCostOfLiving(cityOne, countryOne); // added await
   let cityTwoData = await searchCostOfLiving(cityTwo, countryTwo); // added await
 
-  console.log(cityOneData);
-  console.log(cityTwoData);
+  // console.log(cityOneData);
+  // console.log(cityTwoData);
   loader.classList.add("d-none");
+  result.classList.remove("d-none");
+
+  firstCountry.value = "";
+  secondCountry.value = "";
 
   // update the result div
   result.innerHTML = `
-  <h2>${cityOne}, ${countryOne}</h2>
-  ${await searchCostOfLiving(cityOne, countryOne)}
-  <h2>${cityTwo}, ${countryTwo}</h2>
-  ${await searchCostOfLiving(cityTwo, countryTwo)}
+  <div class="d-flex flex-row justify-content-around">
+    <div class="p-3">
+      <h2>${cityOne.toUpperCase()}, ${countryOne.toUpperCase()}</h2>
+      ${cityOneData}
+    </div>
+    <div class="p-3">
+      <h2>${cityTwo.toUpperCase()}, ${countryTwo.toUpperCase()}</h2>
+      ${cityTwoData}
+    </div>
+  </div>
 `;
 
 
@@ -151,42 +162,67 @@ const searchCostOfLiving = (city, country) => {
   return fetch(`https://cities-cost-of-living-and-average-prices-api.p.rapidapi.com/cost_of_living?country=${country}&city=${city}`, options)
     .then(response => response.json())
     .then(data => {
+      const {Status, Success, Version, ...countryInfo} = data;
       let result = `
-      <table class="table">
-        <thead>`;
-      for (let key in data) {
+      <div>`;
+      for (let key in countryInfo) {
 
-        if (data.hasOwnProperty(key)) {
-          console.log(data[key])
-          console.log(typeof data[key] === 'object')
+        if (countryInfo.hasOwnProperty(key)) {
+
+          // console.log(data[key])
+          // console.log(typeof data[key] === 'object')
 
           let computedValue = [];
 
-          if(typeof data[key] === 'object'){
-            computedValue = data[key].map((el)=>`${el.Cost} : ${el.Value}`);
+          if(typeof countryInfo[key] === 'object'){
+            computedValue = countryInfo[key].map((el)=>`${el.Cost} : ${el.Value}`);
 
           }
 
-
           // console.log(computedValue.toString());
-          console.log(computedValue);
+          // console.log(computedValue);
 
+          // computedValue.map((value) => {
+          //   const itemName = value.split(":")[0];
+          //   const itemValue = value.split(":")[1];
+          //   console.log({itemName, itemValue});
+          // })
 
           result += `
-            <tr>
-              <td>${key}</td>
-              <td>${ typeof data[key] === 'object' ? computedValue.toString() :  data[key]}</td>
-            </tr>
+            ${typeof countryInfo[key] === 'object' ? `
+              <div class="mb-5">
+                <h5 class="mb-1">${key}</h5>
+                  <table class="table table-striped table-bordered border-secondary">
+                      <thead>
+                        <tr>
+                          <th scope="col">Item</th>
+                          <th scope="col">Value</th>
+                        </tr>
+                      </thead>
+                  ${computedValue.map(item => (
+                    `<tbody>
+                        <tr>
+                          <td>${item.split(":")[0]}</td>
+                          <td>${item.split(":")[1]}</td>
+                        </tr>
+                      </tbody>`
+                  )).join(" ")}
+                  </table>
+              </div>
+            ` :  
+            `<div>
+                <h6 class="pe-1">${key} : ${countryInfo[key]}</h6>
+              </div>`
+            }
           `;
-
-
         }
       }
-      result += '</table>';
+      result += '</div>';
       return result;
     })
     .catch(err => console.error(err));
 };
+
 
 
 
