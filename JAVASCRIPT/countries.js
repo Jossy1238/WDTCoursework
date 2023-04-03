@@ -244,47 +244,104 @@ searchBtn.addEventListener("click", () => {
 });
 
 
+
+
+
 /*Js for chart*/
 // Define the API endpoint to fetch the data
-const url = 'https://restcountries.com/v3.1/all';
+// const url = 'https://restcountries.com/v3.1/all';
 
 // Fetch the data using Fetch API
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
+// fetch(url)
+//   .then(response => response.json())
+//   .then(data => {
     // Process the data to get the total number of countries in each continent
-    const continentMap = new Map();
-    data.forEach(country => {
-      const continent = country.region;
-      if (continent in continentMap) {
-        continentMap[continent]++;
-      } else {
-        continentMap[continent] = 1;
-      }
-    });
+    // const continentMap = new Map();
+    // data.forEach(country => {
+    //   const continent = country.region;
+    //   if (continent in continentMap) {
+    //     continentMap[continent]++;
+    //   } else {
+    //     continentMap[continent] = 1;
+    //   }
+    // });
 
     // Create a new chart using Chart.js
-    const ctx = document.getElementById('chart').getContext('2d');
-    const chart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: Object.keys(continentMap),
-        datasets: [{
-          label: 'Total number of countries',
-          data: Object.values(continentMap),
-          backgroundColor: 'rgba(54, 162, 235, 0.2)',
-          borderColor: 'rgba(54, 162, 235, 1)',
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            ticks: {
-              beginAtZero: true
-            }
-          }
-        }
+  //   const ctx = document.getElementById('chart').getContext('2d');
+  //   const chart = new Chart(ctx, {
+  //     type: 'bar',
+  //     data: {
+  //       labels: Object.keys(continentMap),
+  //       datasets: [{
+  //         label: 'Total number of countries per continent',
+  //         data: Object.values(continentMap),
+  //         backgroundColor: 'rgba(54, 162, 235, 0.2)',
+  //         borderColor: 'rgba(54, 162, 235, 1)',
+  //         borderWidth: 1
+  //       }]
+  //     },
+  //     options: {
+  //       scales: {
+  //         y: {
+  //           ticks: {
+  //             beginAtZero: true
+  //           }
+  //         }
+  //       }
+  //     }
+  //   });
+  // });
+
+
+
+  /*Js for chart*/
+// Define the API endpoint to fetch the data
+ const url = 'https://restcountries.com/v3.1/all';
+
+ // Fetch the data using Fetch API
+  fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    const continents = {};
+    data.forEach(country => {
+      const continent = country.region;
+      if (continent in continents) {
+        continents[continent] += 1;
+      } else {
+        continents[continent] = 1;
       }
     });
+    const chartData = {
+      labels: Object.keys(continents),
+      datasets: [{
+        label: 'Total Number of Countries by Continent',
+        data: Object.values(continents),
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgba(54, 162, 235, 1)',
+        borderWidth: 1
+      }]
+    };
+    const chartOptions = {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }]
+      },
+      legend: {
+        display: false
+      },
+      responsive: true,
+      maintainAspectRatio: false,
+      barThickness: 30 // Adjust the bar thickness as needed
+    };
+    const chart = new Chart(document.getElementById('chart'), {
+      type: 'bar',
+      data: chartData,
+      options: chartOptions
+    });
+  })
+  .catch(error => {
+    console.error('Error:', error);
   });
