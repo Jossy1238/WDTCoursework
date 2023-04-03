@@ -191,7 +191,7 @@ const searchCostOfLiving = (city, country) => {
           result += `
             ${typeof countryInfo[key] === 'object' ? `
               <div class="mb-5">
-                <h5 class="mb-1">${key}</h5>
+                <h5 class="mb-1 fw-bold">${key}</h5>
                   <table class="table table-striped table-bordered border-secondary">
                       <thead>
                         <tr>
@@ -211,7 +211,7 @@ const searchCostOfLiving = (city, country) => {
               </div>
             ` :  
             `<div>
-                <h6 class="pe-1">${key} : ${countryInfo[key]}</h6>
+                <h6 class="pe-1 mb-2">${key} : ${countryInfo[key]}</h6>
               </div>`
             }
           `;
