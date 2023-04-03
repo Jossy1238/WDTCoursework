@@ -269,8 +269,8 @@ img{
 
 
 
-/* Home */
-.home{
+/* Introduction session */
+.Introduction{
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -279,20 +279,20 @@ img{
   background: #F5F5F5;
   gap: 1rem;
 }
-.home-test{
+.Introduction-text{
   flex: 1 1 17rem;
   padding: 100px;
   margin-top: 5px;
 }
-.home-img{
+.Introduction-image{
   flex: 1 1 17rem;
   padding: 70px;
 }
-.home_img1{
+.Introduction--picture1{
   min-width: 100%;
   height:24em; 
 }
-.home-img img{
+.Introduction--picture1 img{
   animation: animate 3s linear infinite;
 }
 @keyframes animate{
@@ -306,18 +306,18 @@ img{
     transform: translate(-11px, 0);
   }
 }
-.home-test span{
+.Introduction-text span{
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 600;
   color: #15535c;
 }
-.home-test h1{
+.Introduction-text h1{
   font-size: 2.5rem;
   color: #1434A4;
   font-weight: bolder;
 }
-.home-test h2{
+.Introduction-text h2{
   font-size: 1.2rem;
   font-weight: 600;
   color: #140B5C;
