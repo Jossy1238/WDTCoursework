@@ -34,7 +34,7 @@ a{
     gap: 60px;
 }
 
-img{
+nav img{
     max-width: 100px;
     height: 13vh;
 }
@@ -259,13 +259,24 @@ img{
   font-weight: 400;
   color: #ff465a;
 } 
-
+/*Styling the properties from javascript */
 .search{
   display: flex;
 }
 .left,
 .right{
   width: 50%;
+}
+.left{
+  padding-left: 3rem;
+  padding-right: 1rem;
+}
+.right{
+  padding-right: 1rem;
+}
+.flag-img{
+  width: 50%;
+  height: auto;
 }
 
 

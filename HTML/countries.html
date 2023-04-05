@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Countries page</title>
+    <title>Countries webpage</title>
+
+      <!-- *******  Boostrap Links  ******* -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-   
+
+         <!-- *******  Font Awesome Links  ******* -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" 
     integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
     crossorigin="anonymous"/>
 
+    <!-- ******* Leaflet Links  ******* -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
      integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
      crossorigin=""/>
 
-   
       <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
       integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
       crossorigin=""></script>
@@ -29,12 +32,17 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"/>
 
-
+    <!--   *****   Link To Custom CSS File   *****   -->
     <link href="../CSS/countries.css" rel="stylesheet" type="text/css">
 
 </head>
 <body>
+      <!-- Header section -->
       <section class="header">
+         <!-- This code is for the header section of a webpage. 
+         It includes a navigation bar with a logo, 
+         a list of links to different pages on the website, 
+         and a hamburger menu for mobile devices. -->
         <nav class="navbar">
             <a href="../HTML/index.html"> <img src="../Images/Logo.png"></a>
             <ul class="nav-menu">
@@ -61,6 +69,8 @@
       </section>
       <!-- Page introduction-->
       <div class="contact-me">
+        <!-- This code creates a section with the class "contact-me" 
+          and displays information about the benefits of checking for countries details. -->
         <h1>Countries Details!</h1>
         <p>Checking for countries details can be a valuable way to expand your knowledge, 
           increase your understanding of the world, 
@@ -69,22 +79,25 @@
         </p>
     </div>
 
-
+    <!-- Countries Details Session-->
     <main>
+      <!-- This code creates a main section with a container div and a search-wrapper div. -->
         <div class="container">
             <div class="search-wrapper">
-                <input type="text" id="country-inp" 
+                <input list="countries" type="text" id="country-inp" 
                 placeholder="Enter a country name here..."/>
-                <button id="search-btn">Search</button>   
+                <button id="search-btn">Search</button>
+                <datalist id="countries"></datalist>   
             </div>
-          </div>
-
-          
+          </div>        
     </main>
     <div id="result"></div>
 
-    
+    <!-- The session for displaying the total number of countries per continent-->
     <section class="column-container">
+      <!-- This code creates a section with the class "column-container" 
+        and a div with the class "chart-container". Inside the chart container, 
+        there is a canvas element with an id of "chart" which can be used to draw a chart. -->
       <div class="chart-container">
         <canvas id="chart"></canvas>
       </div>
@@ -92,7 +105,7 @@
 
 
 
-
+      <!-- Footer session-->
       <footer>
         <div class="content">
           <div class="top">
@@ -166,7 +179,8 @@
 
     <!--   *****   Link To Custom Script File   *****   -->
     <script src="../JAVASCRIPT/countries.js"></script>
-
+    
+    <!--   *****   Link To Chart JS Script File   *****   -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
      

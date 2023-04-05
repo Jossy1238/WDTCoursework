@@ -62,37 +62,35 @@ searchBtn.addEventListener("click", () => {
 
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Capital:</h4>
-                        <span>${data[0].capital[0]}</span>
+                        <h4>Capital: <span>${data[0].capital[0]}</span></h4>
+                        
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Continent:</h4>
-                        <span>${data[0].continents[0]}</span>
+                        <h4>Continent: <span>${data[0].continents[0]}</span></h4>     
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Common Languages:</h4>
-                        <span>${Object.values(data[0].languages)
-                        .toString()
-                        .split(",")
-                        .join(", ")}</span>
+                        <h4>Common Languages:<span>${Object.values(data[0].languages)
+                          .toString()
+                          .split(",")
+                          .join(", ")}</span>
+                          </h4> 
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Population:</h4>
-                        <span>${data[0].population}</span>
+                        <h4>Population: <span>${data[0].population}</span></h4>     
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Currency:</h4>
-                        <span>${
-                        data[0].currencies[Object.keys(data[0].currencies)].name
-                        } - ${Object.keys(data[0].currencies)[0]}</span>
+                        <h4>Currency: <span>${
+                          data[0].currencies[Object.keys(data[0].currencies)].name
+                          } - ${Object.keys(data[0].currencies)[0]}</span></h4>
+                       
                     </div>
                 </div>
                 <div class="data-wrapper">
@@ -106,54 +104,53 @@ searchBtn.addEventListener("click", () => {
           <div class="right">
              <div class="wrapper">
              <div class="data-wrapper">
-               <h4>Total land Area:</h4>
-               <span>${data[0].area}</span>
+               <h4>Total Land Area: <span>${data[0].area}</span></h4>
+               
              </div>
            </div>
 
            <div class="wrapper">
                <div class="data-wrapper">
-               <h4>Start of Week:</h4>
-               <span>${data[0].startOfWeek}</span>
+               <h4>Start of Week: <span>${data[0].startOfWeek}</span></h4>
+               
                </div>
            </div>
 
            <div class="wrapper">
                <div class="data-wrapper">
-               <h4>Latitude:</h4>
-               <span>${data[0].latlng[0]}</span>
+               <h4>Latitude: <span>${data[0].latlng[0]}</span></h4>
+               
                </div>
            </div>
 
            <div class="wrapper">
                <div class="data-wrapper">
-               <h4>Longitude:</h4>
-               <span>${data[0].latlng[1]}</span>
+               <h4>Longitude: <span>${data[0].latlng[1]}</span></h4>      
                </div>
            </div>
 
            <div class="wrapper">
                <div class="data-wrapper">
-               <h4>Timezones:</h4>
-               <span>${data[0].timezones[0]}</span>
+               <h4>Timezones: <span>${data[0].timezones[0]}</span></h4>
+               
                </div>
            </div>
 
            <div class="wrapper">
                <div class="data-wrapper">
-               <h4>Subregion:</h4>
-               <span>${data[0].subregion}</span>
+               <h4>Subregion: <span>${data[0].subregion}</span></h4>
+               
                </div>
            </div>
 
 
            <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Borders with other countries:</h4>
-                        <span>${Object.values(data[0].borders)
-                        .toString()
-                        .split(",")
-                        .join(", ")}</span>
+                        <h4>Borders with other countries: <span>${Object.values(data[0].borders)
+                          .toString()
+                          .split(",")
+                          .join(", ")}</span>
+                          </h4>  
                     </div>
             </div>
 
@@ -169,7 +166,7 @@ searchBtn.addEventListener("click", () => {
         
       `;
 
-      cuntriesMap(data[0].latlng[0], data[0].latlng[1]);
+      cuntriesMap(data[0].latlng[0], data[0].latlng[1], data[0].capital[0]);
     })
     .catch(() => {
       if (countryName.length == 0) {
@@ -195,7 +192,9 @@ searchBtn.addEventListener("click", () => {
   .then(response => response.json())
   .then(data => {
     const continents = {};
+    let out ='';
     data.forEach(country => {
+      out += `<option value=${country.name.common} />`
       const continent = country.region;
       if (continent in continents) {
         continents[continent] += 1;
@@ -203,6 +202,7 @@ searchBtn.addEventListener("click", () => {
         continents[continent] = 1;
       }
     });
+    document.getElementById('countries').innerHTML = out;
     const chartData = {
       labels: Object.keys(continents),
       datasets: [{
@@ -237,167 +237,3 @@ searchBtn.addEventListener("click", () => {
   .catch(error => {
     console.error('Error:', error);
   });
-
-
-/*Js for chart*/
-// Define the API endpoint to fetch the data
-// const url = 'https://restcountries.com/v3.1/all';
-
-// Fetch the data using Fetch API
-// fetch(url)
-//   .then(response => response.json())
-//   .then(data => {
-    // Process the data to get the total number of countries in each continent
-    // const continentMap = new Map();
-    // data.forEach(country => {
-    //   const continent = country.region;
-    //   if (continent in continentMap) {
-    //     continentMap[continent]++;
-    //   } else {
-    //     continentMap[continent] = 1;
-    //   }
-    // });
-
-    // Create a new chart using Chart.js
-  //   const ctx = document.getElementById('chart').getContext('2d');
-  //   const chart = new Chart(ctx, {
-  //     type: 'bar',
-  //     data: {
-  //       labels: Object.keys(continentMap),
-  //       datasets: [{
-  //         label: 'Total number of countries per continent',
-  //         data: Object.values(continentMap),
-  //         backgroundColor: 'rgba(54, 162, 235, 0.2)',
-  //         borderColor: 'rgba(54, 162, 235, 1)',
-  //         borderWidth: 1
-  //       }]
-  //     },
-  //     options: {
-  //       scales: {
-  //         y: {
-  //           ticks: {
-  //             beginAtZero: true
-  //           }
-  //         }
-  //       }
-  //     }
-  //   });
-  // });
-
-
-   // result.innerHTML =`
-
-    //         <h2 class="text-heading text-3xl font-bold">${data[0].name.common}</h2>
-    //         <div class="main">
-    //             <div class="country_search_left">
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                         <h4>Map:</h4>
-    //                         <div id="map"></div>
-    //                     </div>  
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Latitude:</h4>
-    //                     <span>${data[0].latlng[0]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Longitude:</h4>
-    //                     <span>${data[0].latlng[1]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Timezones:</h4>
-    //                     <span>${data[0].timezones[0]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="data-wrapper">
-    //                     <h4>Coat Of Arms:</h4>
-    //                     <img src="${data[0].coatOfArms.svg}" class="flag-img">
-    //                 </div>
-
-    //             </div>
-
-    //             <div class="country_search_right">
-    //                 <img src="${data[0].flags.svg}" class="flag-img">
-
-    //                 <div class="data-wrapper">
-    //                     <h4>Official Name:</h4>
-    //                     <span>${data[0].name.official}</span>
-    //                 </div>
-                    
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Capital:</h4>
-    //                     <span>${data[0].capital[0]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Continent:</h4>
-    //                     <span>${data[0].continents[0]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Population:</h4>
-    //                     <span>${data[0].population}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Independent:</h4>
-    //                     <span>${data[0].independent}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Start of Week:</h4>
-    //                     <span>${data[0].startOfWeek}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Subregion:</h4>
-    //                     <span>${data[0].subregion}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Currency:</h4>
-    //                     <span>${data[0].currencies[Object.keys(data[0].currencies)].name} - ${Object.keys(data[0].currencies)[0]}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>Common Language:</h4>
-    //                     <span>${Object.values(data[0].languages).toString().split(",").join(",")}</span>
-    //                     </div>
-    //                 </div>
-
-    //                 <div class="wrapper">
-    //                     <div class="data-wrapper">
-    //                     <h4>UN Member:</h4>
-    //                     <span>${data[0].unMember}</span>
-    //                     </div>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //         `;
-    //     loadMap(data[0].latlng[0], data[0].latlng[1], data[0].name.common);
-
-    //     countryInp.value = "";
