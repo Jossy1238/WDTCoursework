@@ -1,3 +1,4 @@
+//script for Header section 
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -10,39 +11,18 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     navMenu.classList.remove("active");
 }))
 
-/*js for ccountries information*/
-// let searchBtn = document.getElementById("search-btn");
-// let countryInp = document.getElementById("country-inp");
-// searchBtn.addEventListener("click", () =>{
-//     let countryName = "India";
-//     let finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
-//     console.log(finalURL);
-//     fetch(finalURL)
-//      .then((Response) => Response.json())
-//      .then((data) =>{
-//         console.log(data[0]);
-//         console.log()
-//     });
-// });
-
-
-
-
-
+//script displaying country's details
 let searchBtn = document.getElementById("search-btn");
 let countryInp = document.getElementById("country-inp");
 const cuntriesMap = (lat, long, country ) =>{
     var map = L.map('map').setView([lat, long], 5);
-
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
-
     L.marker([lat, long]).addTo(map)
         .bindPopup(`${country}`)
         .openPopup();
 }
-
 searchBtn.addEventListener("click", () => {
   let countryName = countryInp.value;
   let finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
@@ -51,19 +31,15 @@ searchBtn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
     console.log(data);
-
-    result.classList.remove("hidden");
-        
+    result.classList.remove("hidden");   
     result.innerHTML = `
         <div class="search">
             <div class="left">
                 <img src="${data[0].flags.svg}" class="flag-img">
                 <h2>${data[0].name.common}</h2>
-
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Capital: <span>${data[0].capital[0]}</span></h4>
-                        
+                        <h4>Capital: <span>${data[0].capital[0]}</span></h4> 
                     </div>
                 </div>
                 <div class="wrapper">
@@ -89,61 +65,48 @@ searchBtn.addEventListener("click", () => {
                     <div class="data-wrapper">
                         <h4>Currency: <span>${
                           data[0].currencies[Object.keys(data[0].currencies)].name
-                          } - ${Object.keys(data[0].currencies)[0]}</span></h4>
-                       
+                          } - ${Object.keys(data[0].currencies)[0]}</span></h4>  
                     </div>
                 </div>
                 <div class="data-wrapper">
                     <h4>Coat Of Arms:</h4>
                     <img src="${data[0].coatOfArms.svg}" class="flag-img">
-                </div>
-                
-                
+                </div> 
             </div>
-
           <div class="right">
              <div class="wrapper">
              <div class="data-wrapper">
                <h4>Total Land Area: <span>${data[0].area}</span></h4>
-               
              </div>
            </div>
-
            <div class="wrapper">
                <div class="data-wrapper">
                <h4>Start of Week: <span>${data[0].startOfWeek}</span></h4>
                
                </div>
            </div>
-
            <div class="wrapper">
                <div class="data-wrapper">
                <h4>Latitude: <span>${data[0].latlng[0]}</span></h4>
-               
                </div>
            </div>
-
            <div class="wrapper">
                <div class="data-wrapper">
                <h4>Longitude: <span>${data[0].latlng[1]}</span></h4>      
                </div>
            </div>
-
            <div class="wrapper">
                <div class="data-wrapper">
                <h4>Timezones: <span>${data[0].timezones[0]}</span></h4>
                
                </div>
            </div>
-
            <div class="wrapper">
                <div class="data-wrapper">
                <h4>Subregion: <span>${data[0].subregion}</span></h4>
                
                </div>
            </div>
-
-
            <div class="wrapper">
                     <div class="data-wrapper">
                         <h4>Borders with other countries: <span>${Object.values(data[0].borders)
@@ -153,7 +116,6 @@ searchBtn.addEventListener("click", () => {
                           </h4>  
                     </div>
             </div>
-
             <div class="wrapper">
                     <div class="data-wrapper">
                         <div id="map"> </div>
@@ -161,11 +123,8 @@ searchBtn.addEventListener("click", () => {
             </div>
                 
             </div>
-        </div>
-
-        
+        </div>   
       `;
-
       cuntriesMap(data[0].latlng[0], data[0].latlng[1], data[0].capital[0]);
     })
     .catch(() => {
@@ -174,7 +133,6 @@ searchBtn.addEventListener("click", () => {
       } else {
         result.innerHTML = `<h3>Please enter a valid country name.</h3>`;
       }
-
     // hide the error after 3 seconds
     setTimeout(() => {
       result.classList.add('hidden');
@@ -182,12 +140,10 @@ searchBtn.addEventListener("click", () => {
     });
 });
 
-
-  /*Js for chart*/
-// Define the API endpoint to fetch the data
+/*Script for bar chart for chart js API*/
+// Defines the API endpoint to fetch the data
  const url = 'https://restcountries.com/v3.1/all';
-
- // Fetch the data using Fetch API
+ // Fetches the data using Fetch API
   fetch(url)
   .then(response => response.json())
   .then(data => {
