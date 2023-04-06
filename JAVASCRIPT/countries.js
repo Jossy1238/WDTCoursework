@@ -11,6 +11,8 @@ document.querySelectorAll(".navigation-field").forEach(n => n.addEventListener("
     navMenu.classList.remove("active");
 }))
 
+
+
 //script displaying country's details
 let searchBtn = document.getElementById("search-btn");
 let countryInp = document.getElementById("country-inp");
