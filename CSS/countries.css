@@ -73,11 +73,8 @@ nav img{
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: white;
-
-    
+    background-color: white;   
 }
-
 @media(max-width:768px){
   .mobile-view{
         display: block;
