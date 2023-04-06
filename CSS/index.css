@@ -10,6 +10,8 @@ body{
 /* Header session */
 .main-header{
     background-color: #000044;
+     /* position: fixed; */
+     width: 100%;
 }
 li{
     list-style: none;
@@ -159,7 +161,7 @@ img{
 }
 
 /*Information section*/
-#wrapper{
+#website-quick-info{
   background: #232427;
   padding: 40px ;
   min-height: 40vh;
@@ -201,20 +203,20 @@ img{
   width: 100%; 
 }
 .single-card h2{
-  font-size: 115px;
+  font-size: 7.188rem;
   color: #404144;
   font-weight: 700;
   text-align: right;
   padding-right: 25px;
 }
 .single-card h3{
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 15px;
   margin-top: -60px;
 }
 .single-card p{
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 24px;
   margin-bottom: 20px;
 }
@@ -229,10 +231,10 @@ img{
   border: none;
   z-index: 1; 
 }
-.card_btn2{
+.second-card{
   background: #2196F3 !important;
 }
-.card_btn3{
+.third-card{
   background: #2196F3 !important;
 }
 .single-card a:focus{
@@ -253,9 +255,9 @@ img{
 .single-card a:hover:after{
   bottom: 0px;
 }
-.single-card a.card_btn1:after,
-.single-card a.card_btn2:after,
-.single-card a.card_btn3:after{
+.single-card a.first-card:after,
+.single-card a.second-card:after,
+.single-card a.third-card:after{
   background: #E91E63;
 }
 
@@ -273,10 +275,10 @@ img{
 }
 .section-header h1{
 	position: relative;
-	font-size: 36px;
+	font-size: 2.25rem;
 	color: #f0bf6a;
-  top: 20px;
-  left: 20px;
+  top: 1.25rem;
+  left: 1.25rem;
 }
 /* Section Header Ends */
 
@@ -287,48 +289,48 @@ img{
 .testimonials-container .testimonial-card{
 	padding: 20px;
 }
-.testimonial-card .test-card-body{
+.testimonial-card .testimonial-wrapper{
 	background-color: #161922;
-	box-shadow: 2px 2px 20px rgba(0,0,0,0.12);
+	box-shadow: 1em 1em 10em rgba(0,0,0,0.12);
 	padding: 20px;
 }
-.test-card-body .quote{
+.testimonial-wrapper .quotation-mark{
 	display: flex;
 	align-items: center;
 }
-.test-card-body .quote i{
-	font-size: 45px;
+.testimonial-wrapper .quotation-mark i{
+	font-size: 2.8rem;
 	color: #dadada;
-	margin-right: 20px;
+	margin-right: 1.6rem;
 }
-.test-card-body .quote h2{
+.testimonial-wrapper .quotation-mark h2{
 	color: #dadada;
 }
-.test-card-body p{
-	margin: 10px 0px 15px;
-	font-size: 14px;
+.testimonial-wrapper p{
+	margin: 0.6rem 0rem 0.9;
+	font-size: 0.9rem;
 	line-height: 1.5;
 	color: #767a86;
 }
-.test-card-body .testimonial-ratings{
-	margin-top: 20px;
+.testimonial-wrapper .testimonial-ratings{
+	margin-top: 1.3;
 }
-.test-card-body .testimonial-ratings i{
-	font-size: 17px;
+.testimonial-wrapper .testimonial-ratings i{
+	font-size: 1.1rem;
 	color: #f0bf6a;
 	cursor: pointer;
 }
 .testimonial-card .Testifier-information{
 	display: flex;
 	align-items: center;
-	margin-top: 25px;
+	margin-top: 1.6rem;
 }
 .Testifier-information .Testifier-picture{
-	width: 55px;
-	height: 55px;
+	width: 3.4rem;
+	height: 3.4rem;
 	border-radius: 50%;
 	overflow: hidden;
-	margin-right: 15px;
+	margin-right: 0.9rem;
 }
 .Testifier-information .Testifier-picture img{
 	width: 100%;
@@ -341,27 +343,27 @@ img{
 	flex-direction: column;
 }
 .testifier-data span:nth-child(1){
-	font-size: 24px;
+	font-size: 1.5rem;
 	font-weight: bold;
 	color: #f0bf6a;
 }
 .testifier-data span:nth-child(2){
-	font-size: 15px;
+	font-size: 0.9rem;
 	color: #767a86;
 }
 .owl-nav{
 	position: absolute;
-	right: 20px;
-	bottom: -10px;
+	right: 1.3rem;
+	bottom: -0.6rem;
 }
 .owl-nav button{
 	border-radius: 50% !important;
 }
 .owl-nav .owl-prev i,
 .owl-nav .owl-next i{
-	padding: 10px !important;
+	padding: 0.6 !important;
 	border-radius: 50%;
-	font-size: 18px !important;
+	font-size: 1.1rem !important;
 	background-color: #161922 !important;
 	color: #f0bf6a;
 	cursor: pointer;
@@ -373,7 +375,7 @@ img{
 	color: #e9e9e9;
 }
 .owl-dots{
-	margin-top: 15px;
+	margin-top: 0.9rem;
 }
 .owl-dots .owl-dot span{
 	background-color: #434753 !important;
@@ -396,40 +398,40 @@ footer::before{
   content: '';
   position: absolute;
   left: 0;
-  top: 90px;
-  height: 1px;
+  top: 5.6rem;
+  height: 0.063rem;
   width: 100%;
   background: #afafb6;
 }
 footer .footer-container{
-  max-width: 1250px;
+  max-width: 78.1rem;
   margin: auto;
-  padding: 30px 40px 40px 40px;
-  margin-bottom: 50px;
+  padding: 1.8rem 2.5rem 2.5rem 2.5rem;
+  margin-bottom: 3.1rem;
 }
 footer .footer-container .footer-header{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 3.1rem;
 }
 .footer-container .footer-header .footer-header-name{
   color: #fff;
-  font-size: 30px;
+  font-size: 1.9rem;
 }
 .footer-container .footer-header .footer-social-media{
   display: flex;
 }
 .footer-container .footer-header .footer-social-media a{
-  height: 40px;
-  width: 40px;
+  height: 2.5rem;
+  width: 2.5rem;
   background: red;
-  margin: 0 8px;
+  margin: 0 0.5rem;
   border-radius: 50%;
   text-align: center;
-  line-height: 40px;
+  line-height: 2.5;
   color: #fff;
-  font-size: 17px;
+  font-size: 1.06rem;
   text-decoration: none;
   transition: all 0.4s ease;
 }
@@ -474,7 +476,7 @@ footer .footer-container .footer-logo{
   justify-content: space-between;
 }
 footer .footer-container .footer-logo img{
-  max-width: 130px;
+  max-width: 8.125rem;
   height: 30vh;
 }
 /*This is the css used to split the footer*/
@@ -483,35 +485,35 @@ footer .footer-container .footer-logo .footer-information{
 }
 .footer-container .footer-logo .footer-information .info-per-column{
   color: #fff;
-  font-size: 18px;
+  font-size: 1.13rem;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 0.625;
   position: relative;
 }
 .footer-logo .footer-information .info-per-column::before{
   content: '';
   position: absolute;
   left: 0;
-  bottom: -2px;
-  height: 2px;
-  width: 35px;
+  bottom: -0.125rem;
+  height: 0.125rem;
+  width: 2.19rem;
   background: #fff;
 }
 .footer-container .footer-logo .footer-information p{
   color: white;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
   transition: all 0.4s ease
 }
 .footer-container .footer-logo .footer-information li{
-  margin: 6px 0;
+  margin: 1rem 0;
   list-style: none;
 }
 .footer-container .footer-logo .footer-information li a{
   color: #fff;
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 400;
   text-decoration: none;
   opacity: 0.8;
@@ -522,31 +524,31 @@ footer .footer-container .footer-logo .footer-information{
   text-decoration: underline;
 }
 .footer-container .footer-logo .input-box{
-  margin-right: 55px;
+  margin-right: 3.4rem;
 }
 .footer-logo .input-box input{
-  height: 40px;
-  width: calc(100% + 55px);
+  height: 2.5rem;
+  width: calc(100% + 3.4rem);
   outline: none;
-  border: 2px solid #AFAFB6;
+  border: 0.12rem solid #AFAFB6;
   background: #140B5C;
-  border-radius: 4px;
-  padding: 0 15px;
-  font-size: 15px;
+  border-radius: 0.25rem;
+  padding: 0 0.93;
+  font-size: 0.9rem;
   color: #fff;
-  margin-top: 5px;
+  margin-top: 0.3rem;
 }
 .footer-logo .input-box input::placeholder{
   color: #AFAFB6;
-  font-size: 16px;
+  font-size: 1rem;
 }
 .footer-logo .input-box input[type="button"]{
   background: #fff;
   color: #140B5C;
   border: none;
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 500;
-  margin: 4px 0;
+  margin: 0.2rem 0;
   opacity: 0.8;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -559,15 +561,15 @@ footer .legal-info{
   background: #0F0844;
 }
 footer .legal-info .legal-details{
-  max-width: 1250px;
+  max-width: 78.1rem;
   margin: auto;
-  padding: 20px 40px;
+  padding: 1.2rem 2.5rem;
   display: flex;
   justify-content: space-between;
 }
 .legal-info .legal-details span,
 .legal-info .legal-details a{
-  font-size: 14px;
+  font-size: 0.9rem;
   font-weight: 300;
   color: #fff;
   opacity: 0.8;
@@ -578,7 +580,7 @@ footer .legal-info .legal-details{
   text-decoration: underline;
 }
 .legal-info .legal-details a{
-  margin-right: 10px;
+  margin-right: 0.6rem;
 }
 /* This media querry if for screen that is not more than 900px */
 @media (max-width: 900px) {
@@ -587,19 +589,19 @@ footer .legal-info .legal-details{
   }
   footer .footer-container .footer-logo .input-box{
     width: 40%;
-    margin-top: 10px;
+    margin-top: 0.6rem;
   } 
   footer::before{
-    top: 85px; 
+    top: 5.3rem; 
   }
   .footer-container .footer-header .footer-header-name{
-    font-size: 10px;
+    font-size: 0.6rem;
   }
   .footer-container .footer-header .footer-header-name .the_name{
-    font-size: 20px;
+    font-size: 1.2rem;
   }
   .footer-container .footer-header .footer-social-media a{
-    font-size: 17px;   
+    font-size: 1.1rem;   
   }
 }
 /* This media querry if for screen that is not more than 700px */
@@ -609,17 +611,17 @@ footer .legal-info .legal-details{
     
    }
   .footer-container .footer-header .footer-header-name{
-    font-size: 26px;
+    font-size: 1.6rem;
   }
 
   .footer-container .footer-header .footer-social-media a{
-    height: 35px;
-    width: 35px;
-    font-size: 14px;
-    line-height: 35px;
+    height: 2.1rem;
+    width: 2.1rem;
+    font-size: 0.9rem;
+    line-height: 2.2rem;
   }
    footer .footer-container .footer-logo .footer-information{
-    width: calc(100% / 2 - 10px);
+    width: calc(100% / 2 - 0.6rem);
   }
 
   footer .footer-container .footer-logo .input-box{
@@ -627,7 +629,7 @@ footer .legal-info .legal-details{
   } 
   .legal-info .legal-details span,
   .legal-info .legal-details a{
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 }
 /* This media querry if for screen that is not more than 520px */
@@ -636,13 +638,13 @@ footer .legal-info .legal-details{
     flex-direction: column;
   }
   footer::before{
-    top: 145px;
+    top: 9rem;
   }
   .footer-container .footer-header .footer-social-media{
-    margin-top: 16px;
+    margin-top: 1rem;
   }
   footer .footer-container .footer-logo .footer-information{
-    width: calc(100% / 2 - 10px);
+    width: calc(100% / 2 - 0.6rem);
   }
   footer .footer-container .footer-logo .input-box{
     width: 100%;
