@@ -103,14 +103,14 @@ main {
   color: white;
 }
 
-section h3 {
+.about-us-intro h3 {
   font-size: 2.1rem;
   font-weight: 200;
   letter-spacing: 0.1rem;
   text-shadow: 0.06rem 0.06rem 0.13rem black;
 }
 
-section h1 {
+.about-us-intro h1 {
   margin: 1.9rem 0 1.3rem 0;
   font-size: 3.4rem;
   font-weight: 700;
@@ -118,14 +118,14 @@ section h1 {
   /* text-transform: uppercase; */
 }
 
-section p {
+.about-us-intro p {
   font-size: 1.6rem;
   word-spacing: 0.1rem;
   margin-bottom: 0.5rem;
   text-shadow: 0.06rem 0.06rem 0.06rem black;
 }
 
-section a {
+.about-us-intro a {
   padding: 0.75rem 1.87rem;
   border-radius: 0.25rem;
   outline: none;
@@ -137,7 +137,7 @@ section a {
   transition: all 0.5s ease;
 }
 
-section .first-button {
+.about-us-intro .first-button {
   background: #0047AB;
   color: #ffff;
   text-transform: uppercase;
@@ -149,7 +149,7 @@ section .first-button {
   color: white;
 }
 
-section .second-button {
+.about-us-intro .second-button {
   background: #0047AB;
   color: white;
   text-transform: uppercase;
@@ -301,6 +301,9 @@ body, input, textarea, a{
     background: #fff;
     color: #000;
 }
+
+
+
 .website-contact-form{
     width: 60%;
     height: 76vh;
@@ -337,7 +340,7 @@ body, input, textarea, a{
 .form-field{
     width: 46%;
     float: left;
-    padding: 0px 1.5rem;
+    padding: 0rem 1.5rem;
     margin: 0.8rem 0.7rem;
     border-radius: 1.6rem;
     box-shadow: inset 0.5rem 0.5rem 0.5rem #cbc3d1, inset -0.5rem -0.5rem 0.7rem #ffffff;
@@ -379,13 +382,10 @@ body, input, textarea, a{
     .website-contact-wrapper{
         border-radius: 1.8rem 1.8rem 0rem 0rem;
     }
-    /* .website-contact-form{
-        border-radius: 30px 30px 0px 0px;
-    } */
+    
     .form-field{
         width: 100%;
         float: none;
-        /* margin: 25px 0px; */
     }
     .website-form-wrapper .form-field:last-child,
     .submit-button{
@@ -493,7 +493,7 @@ footer .footer-container .footer-logo img{
 }
 /*This is the css used to split the footer*/
 footer .footer-container .footer-logo .footer-information{
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 00.6rem);
 }
 .footer-container .footer-logo .footer-information .info-per-column{
   color: #fff;
@@ -568,6 +568,9 @@ footer .footer-container .footer-logo .footer-information{
 .input-box input[type="button"]:hover{
   opacity: 1;
 }
+
+
+
 footer .legal-info{
   width: 100%;
   background: #0F0844;

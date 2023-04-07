@@ -9,7 +9,7 @@ body{
 }
 .main-header{
   background-color: #000044;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
 }
 li{
@@ -94,78 +94,68 @@ nav img{
 
 /* Page introduction */
 main {
-    width: 100%;
-    height: 85vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-  }
-  
-  section h3 {
-    font-size: 2.1rem;
-    font-weight: 200;
-    letter-spacing: 0.1rem;
-    text-shadow: 0.06rem 0.06rem 0.13rem black;
-  }
-  
-  section h1 {
-    margin: 1.9rem 0 1.3rem 0;
-    font-size: 3.4rem;
-    font-weight: 700;
-    text-shadow: 0.12rem 0.06rem 0.3rem black;
-    /* text-transform: uppercase; */
-  }
-  
-  section p {
-    font-size: 1.6rem;
-    word-spacing: 0.1rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 0.06rem 0.06rem 0.06rem black;
-  }
-  
-  section a {
-    padding: 0.75rem 1.87rem;
-    border-radius: 0.25rem;
-    outline: none;
-    /* text-transform: uppercase; */
-    font-size: 0.8rem;
-    font-weight: 500;
-    text-decoration: none;
-    letter-spacing: 0.06rem;
-    transition: all 0.5s ease;
-  }
-  
-  section .first-button {
-    background: #0047AB;
-    color: #ffff;
-    text-transform: uppercase;
-
-  }
-  
-  .first-button:hover {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  /* margin-top: 10rem; */
+}
+.about-us-intro h3 {
+  font-size: 2.1rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  text-shadow: 0.06rem 0.06rem 0.13rem black;
+}
+.about-us-intro h1 {
+  margin: 1.9rem 0 1.3rem 0;
+  font-size: 3.4rem;
+  font-weight: 700;
+  text-shadow: 0.12rem 0.06rem 0.3rem black;
+  /* text-transform: uppercase; */
+}
+.about-us-intro p {
+  font-size: 1.6rem;
+  word-spacing: 0.1rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0.06rem 0.06rem 0.06rem black;
+}
+.about-us-intro a {
+  padding: 0.75rem 1.87rem;
+  border-radius: 0.25rem;
+  outline: none;
+  /* text-transform: uppercase; */
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 0.06rem;
+  transition: all 0.5s ease;
+} 
+.about-us-intro .first-button {
+  background: #0047AB;
+  color: #ffff;
+  text-transform: uppercase;
+}
+.first-button:hover {
+  background: #088F8F;
+  color: white;
+}
+.about-us-intro .second-button {
+  background: #0047AB;
+  color: white;
+  text-transform: uppercase;
+}
+.second-button:hover {
     background: #088F8F;
     color: white;
-  }
-  
-  section .second-button {
-    background: #0047AB;
-    color: white;
-    text-transform: uppercase;
-
-  }
-  
-  .second-button:hover {
-    background: #088F8F;
-    color: white;
-  }
-  
-  .content-animation:after {
-    content: "";
-    animation: changetext 10s infinite linear;
-    color: #140B5C;
-  }
+} 
+.content-animation:after {
+  content: "";
+  animation: changetext 10s infinite linear;
+  color: #140B5C;
+}
   
   @keyframes changetext {
     0% {
@@ -286,7 +276,7 @@ footer .footer-container .footer-logo img{
 }
 /*This is the css used to split the footer*/
 footer .footer-container .footer-logo .footer-information{
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 0.6rem);
 }
 .footer-container .footer-logo .footer-information .info-per-column{
   color: #fff;

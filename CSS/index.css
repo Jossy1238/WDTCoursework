@@ -9,7 +9,7 @@
 }
 .main-header{
     background-color: #000044;
-    /* position: fixed; */
+    position: fixed;
     width: 100%;
 }
 li{
@@ -31,7 +31,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 60px;
+    gap: 3.75rem;
 }
 
 nav img{
@@ -101,15 +101,17 @@ nav img{
   align-items: center;
   background: #F5F5F5;
   gap: 1rem;
+  top: 3rem;
+
 }
 .Introduction-text{
   flex: 1 1 17rem;
-  padding: 100px;
-  margin-top: 5px;
+  padding: 6.25rem;
+  margin-top: 0.3rem;
 }
 .Introduction-image{
   flex: 1 1 17rem;
-  padding: 70px;
+  padding: 4.3rem;
 }
 .Introduction--picture1{
   min-width: 100%;
@@ -121,13 +123,13 @@ nav img{
 
  @keyframes animate{
   0%{
-    transform: translate(-11px, 0);
+    transform: translate(-0.6rem, 0);
   }
   0%{
-    transform: translate(-0px, -11px);
+    transform: translate(-0px, -0.6rem);
   }
   0%{
-    transform: translate(-11px, 0);
+    transform: translate(-0.6rem, 0);
   }
 } 
 .Introduction-text span{
@@ -149,9 +151,9 @@ nav img{
   margin: 0.5rem 0 1.4rem;
 }
 .btn{
-  padding: 7px 16px;
-  border: 2px solid black;
-  border-radius: 40px;
+  padding: 0.4rem 1rem;
+  border: 0.125rem solid black;
+  border-radius: 2.5rem;
   color: #140B5C;
   font-weight: 500;
 }
@@ -163,7 +165,7 @@ nav img{
 /*Information section*/
 #website-quick-info{
   background: #232427;
-  padding: 40px ;
+  padding: 2.6rem ;
   min-height: 40vh;
   display: flex;
   vertical-align: middle;
@@ -172,19 +174,19 @@ nav img{
 }
 .card_area{
   background: #232427;
-  margin: 12px;
-  border: 2px solid #232427;
-  border-radius: 10px;
-  box-shadow: 0em 0em 6.5em 0em #15535c;
+  margin: 0.9rem;
+  border: 0.1rem solid #232427;
+  border-radius: 0.7rem;
+  box-shadow: 0rem 0rem 0.8rem 0rem #15535c;
 }
 .single-card{
   position: relative;
   background: #313236;
-  padding: 10px 20px;
+  padding: 0.5rem 1.25rem;
   color: #fff;
   text-align: center;
-  margin: 20px;
-  border-radius: 10px;
+  margin: 1.25rem;
+  border-radius: 0.6rem;
   box-shadow: 0em 0em 6.5em 0em #151618;
   z-index: 1;
 }
@@ -207,27 +209,27 @@ nav img{
   color: #404144;
   font-weight: 700;
   text-align: right;
-  padding-right: 25px;
+  padding-right: 1.5rem;
 }
 .single-card h3{
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 15px;
-  margin-top: -60px;
+  margin-bottom: 1rem;
+  margin-top: -4rem;
 }
 .single-card p{
   font-size: 1.125rem;
-  line-height: 24px;
-  margin-bottom: 20px;
+  line-height: 1.5rem;
+  margin-bottom: 1.2rem;
 }
 .single-card a{
   position: relative;
   overflow: hidden;
   background: #2196F3;
   color: white !important;
-  padding: 5px 24px;
+  padding: 0.3rem 1.5rem;
   font-weight: 600;
-  margin-bottom: 60px;
+  margin-bottom: 3.75;
   border: none;
   z-index: 1; 
 }
@@ -244,16 +246,16 @@ nav img{
 .single-card a:after{
   content: "";
   position: absolute;
-  border-radius: 3px;
+  border-radius: 0.18rem;
   width: 100%;
   height: 100%;
   left: 0;
-  bottom: -40px;
+  bottom: -2.5rem;
   transition: all 1s;
   z-index: -1;
 }
 .single-card a:hover:after{
-  bottom: 0px;
+  bottom: 0rem;
 }
 .single-card a.first-card:after,
 .single-card a.second-card:after,
@@ -264,13 +266,13 @@ nav img{
 /*Testiminial section*/
 .testimonials-section{
 	width: 100%;
-	padding: 0px 8%;
+	padding: 0rem 8%;
   height: 90vh;
   background-color: #191d28;
 }
 /* Section Header Starts */
 .testimonials-section .section-header{
-	max-width: 700px;
+  width: 100%;
 	text-align: center;
 }
 .section-header h1{
@@ -287,12 +289,12 @@ nav img{
 	position: relative;
 }
 .testimonials-container .testimonial-card{
-	padding: 20px;
+	padding: 1.2rem;
 }
 .testimonial-card .testimonial-wrapper{
 	background-color: #161922;
-	box-shadow: 1em 1em 10em rgba(0,0,0,0.12);
-	padding: 20px;
+	box-shadow: 0.188rem 0.12rem 1.2rem rgba(0,0,0,0.12);
+	padding: 1.25rem;
 }
 .testimonial-wrapper .quotation-mark{
 	display: flex;
@@ -379,7 +381,7 @@ nav img{
 }
 .owl-dots .owl-dot span{
 	background-color: #434753 !important;
-	padding: 6px !important;
+	padding: 0.3rem !important;
 }
 .owl-dot.active span{
 	background-color: #f0bf6a !important;
@@ -481,7 +483,7 @@ footer .footer-container .footer-logo img{
 }
 /*This is the css used to split the footer*/
 footer .footer-container .footer-logo .footer-information{
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 0.6rem);
 }
 .footer-container .footer-logo .footer-information .info-per-column{
   color: #fff;

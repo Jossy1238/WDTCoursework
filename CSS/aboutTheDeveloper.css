@@ -103,14 +103,14 @@ main {
   color: white;
 }
 
-section h3 {
+.about-us-intro h3 {
   font-size: 2.1rem;
   font-weight: 200;
   letter-spacing: 0.1rem;
   text-shadow: 0.06rem 0.06rem 0.13rem black;
 }
 
-section h1 {
+.about-us-intro h1 {
   margin: 1.9rem 0 1.3rem 0;
   font-size: 3.4rem;
   font-weight: 700;
@@ -118,14 +118,14 @@ section h1 {
   /* text-transform: uppercase; */
 }
 
-section p {
+.about-us-intro p {
   font-size: 1.6rem;
   word-spacing: 0.1rem;
   margin-bottom: 0.5rem;
   text-shadow: 0.06rem 0.06rem 0.06rem black;
 }
 
-section a {
+.about-us-intro a {
   padding: 0.75rem 1.87rem;
   border-radius: 0.25rem;
   outline: none;
@@ -137,7 +137,7 @@ section a {
   transition: all 0.5s ease;
 }
 
-section .first-button {
+.about-us-intro .first-button {
   background: #0047AB;
   color: #ffff;
   text-transform: uppercase;
@@ -149,7 +149,7 @@ section .first-button {
   color: white;
 }
 
-section .second-button {
+.about-us-intro .second-button {
   background: #0047AB;
   color: white;
   text-transform: uppercase;
@@ -192,7 +192,7 @@ section .second-button {
 
 
 /*About the developer section*/
-.developer-section{
+/* .developer-section{
   width: 100%;
   background: whitesmoke;
 }
@@ -221,7 +221,9 @@ section .second-button {
   display: block;
   margin: auto;
 }
-/*Developer img and contact Section */
+
+
+/*Developer img and contact Section 
 #developer-sec-container-2{
   background: #000044;
   width: 100%;
@@ -242,7 +244,7 @@ section .second-button {
   height: 430px;
   padding: 40px 25px 35px 25px;
   border-radius: 0px 30px 30px 0px;
-  /* background: #ecf0f3; */
+  /* background: #ecf0f3; 
 }
  .the-pics{
   min-width: 100%;
@@ -273,7 +275,7 @@ section .second-button {
 }
 .developer-contact{
   list-style: none;
-  /* margin: 60px 0px; */
+  /* margin: 60px 0px; 
 } 
 .developer-contact{
   margin-top: 25px;
@@ -281,7 +283,7 @@ section .second-button {
   color: #fff;
 }
 .developer-contact li i{
-  /* background: #F44770; */
+  /* background: #F44770; 
   padding: 8px;
   border-radius: 40%;
   margin-right: 2px;
@@ -331,13 +333,10 @@ section .second-button {
   .developer-contact-details{
       border-radius: 1.8rem 1.8rem 0rem 0rem;
   }
-  /* .developer-picture{
-      border-radius: 30px 30px 0px 0px;
-  } */
+  
   .form-group{
       width: 100%;
       float: none;
-      /* margin: 25px 0px; */
   }
   .form-field .form-group:last-child,
   .submit-button{
@@ -346,6 +345,150 @@ section .second-button {
     .submit-button{
       margin: 0.6rem 0rem;
   } 
+
+}*/
+
+
+/*About the developer section*/
+ .developer-section{
+  width: 100%;
+  background: whitesmoke;
+}
+.developer-section .developer-section-container-1{
+  width: 80%;
+  display: block;
+  margin: 0rem auto;
+  padding: 3.1rem 0rem;
+} 
+.developer-section-container-1 .developer-section-title{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3.1rem;
+}
+.developer-section-container-1 .developer-section-title h1{
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  color: #88941e;
+}
+.developer-section-container-1 .developer-section-title h1::after{
+  content: "";
+  height: 0.3rem;
+  width: 30%;
+  background-color: #c4d156;
+  border-radius: 1.6rem;
+  display: block;
+  margin: auto;
+}
+
+/*For developers picture and socila media handles*/
+#developer-sec-container-2{
+  background: #000044;
+  width: 100%;
+  padding: 0.6rem;
+}
+
+.developer-picture-wrapper{
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 1.9rem;
+  margin-top: 1.9rem;
+  margin: auto;
+  height: 440px;
+}
+.developer-contact-details{
+  width: 50%;
+  height: 78vh;
+  padding: 1.25rem;
+  padding-top: 1.8rem;
+  border-radius: 1.8rem 1.8rem 1.8rem 1.8rem;
+  background: linear-gradient(144deg, rgba(126,39,156,1)0%, rgba(49,39,157,1)100%);
+  color: #fff;
+
+}
+.website-contact{
+  text-align: left;
+  font-size: 1.7rem;
+  letter-spacing: 0.03rem;
+}
+.contact-sub-title{
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-top: 1.1rem;
+  letter-spacing: 0.03rem;
+  line-height: 1.6rem;
+}
+.developer-contact{
+  list-style: none;
+} 
+.developer-contact{
+  margin-top: 1.6rem;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.developer-contact li i{
+  padding: 0.5rem;
+  border-radius: 40%;
+  margin-right: 0.13rem;
+}
+.developer-contact li a{
+  color: #fff;
+  text-decoration: none;  
+}
+.developer-contact li a:hover{
+  color: #F44770;
+}
+.developer-social-handles{
+  list-style: none;
+  text-align: center;
+  margin: 1.2rem 0rem;
+}
+.developer-social-handles li{
+  display: inline-block;
+}
+.developer-social-handles li i{
+  background: #F44770;
+  color: #fff;
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border-radius: 22%;
+  margin: 0rem 0.3rem;
+  cursor: pointer;
+  transition: all 5s;
+}
+.developer-social-handles li i:hover{
+  background: #fff;
+  color: #000;
+}
+.developer-picture{
+  width: 50%;
+  height: 78vh;
+  padding: 2.5rem 1.5rem 2.1rem 1.5rem;
+  /* border-radius: 0rem 1.8rem 1.8 0rem; */
+  border-radius: 1.8rem 1.8rem 1.8rem 1.8rem;
+  background: #ecf0f3;
+}
+.the-pics{
+  width: 100%;
+  height: 24rem;
+  
+}
+
+@media (max-width: 767px){
+  .developer-picture-wrapper{
+      width: 100%;
+
+  }
+  .developer-contact-details,
+  .website-contact-form{
+      width: 50%;
+      height: inherit;
+      float: none;
+  }
+  .developer-picture{
+      border-radius: 1.8rem 1.8rem 0rem 0rem;
+  }
+
 
 } 
 
@@ -445,7 +588,7 @@ footer .footer-container .footer-logo img{
 }
 /*This is the css used to split the footer*/
 footer .footer-container .footer-logo .footer-information{
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 0.6rem);
 }
 .footer-container .footer-logo .footer-information .info-per-column{
   color: #fff;
@@ -614,4 +757,4 @@ footer .legal-info .legal-details{
     width: 100%;
   }
 }
-footer Ends
+/* footer Ends */
