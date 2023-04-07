@@ -105,20 +105,27 @@ nav img{
   top: 3rem;
   padding-top: 5rem;  
 
-
 }
 .Introduction-text{
   flex: 1 1 17rem;
   padding: 6.25rem;
   margin-top: 0.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background: #F5F5F5;
+  gap: 1rem;
 }
 .Introduction-image{
   flex: 1 1 17rem;
   padding: 4.3rem;
+  margin-top: 5px;
+
 }
 .Introduction--picture1{
   min-width: 100%;
-  height:24em; 
+  height:24em;
+ 
 }
 .Introduction--picture1 img{
   animation: animate 3s linear infinite;
@@ -164,6 +171,44 @@ nav img{
   color: #FFFFFF;
   background: #2196F3;
 }
+
+@media (max-width: 768px) {
+  .Introduction{
+  padding-top: 4rem;
+  display: flex;
+  }
+  /* .Introduction-text{
+  flex: 100%;
+  padding: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  }*/
+  .Introduction-image{
+  flex: 100%;
+  padding: 0.1rem;
+  }
+  .Introduction--picture1{
+  height: auto;
+  width: 100%;
+  }
+  /*.Introduction-text span{
+  font-size: 1.3rem;
+  }*/
+  .Introduction-text h1{
+  font-size: 2rem;
+  }
+  /*.Introduction-text h2{
+  font-size: 1rem;
+  }
+  .btn{
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  } */
+  }
+  
+  
+    
+
 
 /*Information section*/
 #website-quick-info{

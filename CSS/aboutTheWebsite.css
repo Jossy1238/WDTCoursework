@@ -212,9 +212,6 @@ main {
     padding-left: 6.2rem;
     padding-right: 6.2rem;
 }
-
-
-
 /*Website contact information*/
 #website-contact-info{
     background: #00008B;
@@ -370,34 +367,7 @@ body, input, textarea, a{
 .submit-button:hover{
     background: #31219d;
 }
-@media (max-width: 767px){
-    .website-contact-details{
-        width: 100%;
 
-    }
-    .website-contact-wrapper,
-    .website-contact-form{
-        width: 100%;
-        height: inherit;
-        float: none;
-    }
-    .website-contact-wrapper{
-        border-radius: 1.8rem 1.8rem 0rem 0rem;
-    }
-    
-    .form-field{
-        width: 100%;
-        float: none;
-    }
-    .website-form-wrapper .form-field:last-child,
-    .submit-button{
-        width: 100%;
-    }
-      .submit-button{
-        margin: 0.6rem 0rem;
-    } 
-
-} 
 /*Contact form ends*/
 
 /* footer Starts*/
@@ -571,8 +541,6 @@ footer .footer-container .footer-logo .footer-information{
   opacity: 1;
 }
 
-
-
 footer .legal-info{
   width: 100%;
   background: #0F0844;
@@ -599,26 +567,159 @@ footer .legal-info .legal-details{
 .legal-info .legal-details a{
   margin-right: 0.6rem;
 }
-/* This media querry if for screen that is not more than 900px */
-@media (max-width: 900px) {
-   footer .footer-container .footer-logo{
-    flex-wrap: wrap;
+/* footer Ends*/
+
+/*Media querries section*/
+/* This media querry if for screen that is not more than 520px */
+@media (max-width: 520px){
+  footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    margin-top: 3rem;
+    height: 0.06rem;
+    width: 100%;
+  }
+  footer .footer-container{
+    max-width: 50rem;
+    margin: auto;
+    padding: 1.8rem 2.5rem 2.5rem 2.5rem;
+    margin-bottom: 3.1rem;
+  }
+  footer .footer-container .footer-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 3.1rem;
+  }
+  footer .footer-container .footer-header{
+    flex-direction: column;
+  }
+  footer::before{
+    top: 9rem;
+  }
+  .footer-container .footer-header .footer-social-media{
+    margin-top: 1rem;
+  }
+  footer .footer-container .footer-logo .footer-information{
+    width: calc(100% / 2 - 0.6rem);
   }
   footer .footer-container .footer-logo .input-box{
-    width: 40%;
-    margin-top: 0.6rem;
-  } 
-  footer::before{
-    top: 5.3rem; 
+    width: 100%;
   }
-  .footer-container .footer-header .footer-header-name{
-    font-size: 0.6rem;
+  /*Contact Form*/
+  .website-contact-form{
+    width: 60%;
+    height: 78vh;
+    padding: 1rem 1rem 1.5rem 1rem;
+    border-radius: 0rem 1rem 1 0rem;
+    }
+    .website-form-header{
+        margin-left: 1rem;
+        font-size: 1rem;
+        letter-spacing: 0.1rem;
+    }
+    .website-form-wrapper{
+        display: table;
+        width: 100%;
+        padding: 0.9rem 0.3rem 0.3 0.3rem;
+    }
+    .website-form-wrapper input,
+    .website-form-wrapper textarea{
+        border: none;
+        outline: none;
+        background: none;
+        color: #555;
+        padding: 0.3rem 0.125rem 0.3rem 0rem; 
+        width: 100%;
+    }
+    .website-form-wrapper textarea{
+        height: 14.3vh;
+        resize: none;
+        width: 80%;
+
+    }
+    .form-field{
+        width: 46%;
+        float: left;
+        padding: 0rem 1.5rem;
+        margin: 0.8rem 0.7rem;
+        border-radius: 1.6rem;
+        box-shadow: inset 0.5rem 0.5rem 0.5rem #cbc3d1, inset -0.5rem -0.5rem 0.7rem #ffffff;
+    }
+    .website-form-wrapper .form-field:last-child{
+        width: 96%;
+    }
+    .submit-button{
+        width: 60%;
+        height: 3.1rem;
+        margin: 0rem 0.7rem;
+        border-radius: 1.8rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+        background: #F44770;
+        box-shadow: 0.18rem 0.18rem 0.5rem #b1b1b1, -0.18rem -0.18rem 0.5rem #fff;
+        transition: 5s;
+
+    }
+    .submit-button:hover{
+        background: #31219d;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    main {
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    
+    .about-us-intro h3 {
+      font-size: 1rem;
+      font-weight: 200;
+      text-shadow: 0.03rem 0.03rem 0.1rem black;
+    }
+    .about-us-intro h1 {
+      margin: 1.9rem 0 1.3rem 0;
+      font-size: 2rem;
+      font-weight: 700;
+      text-shadow: 0.12rem 0.06rem 0.3rem black;
+      /* text-transform: uppercase; */
+    }
+    
+    .about-us-intro p {
+      font-size: 1.2rem;
+      word-spacing: 0.1rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0.06rem 0.06rem 0.06rem black;
+    }
+    
+    .about-us-intro a {
+      padding: 0.2rem 1.5rem;
+      border-radius: 0.2rem;
+      font-size: 0.8rem;
+      font-weight: 500; 
+    }
+    .website-information h1{
+      font-size: 0.6rem;
+      margin-bottom: 0.3rem;
   }
-  .footer-container .footer-header .footer-header-name .the_name{
-    font-size: 1.2rem;
-  }
-  .footer-container .footer-header .footer-social-media a{
-    font-size: 1.1rem;   
+    .website-information p{
+      font-size: 0.6rem;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
   }
 }
 /* This media querry if for screen that is not more than 700px */
@@ -649,22 +750,53 @@ footer .legal-info .legal-details{
   font-size: 0.75rem;
 }
 }
-/* This media querry if for screen that is not more than 520px */
-@media (max-width: 520px){
-  footer .footer-container .footer-header{
-    flex-direction: column;
+
+/* This media querry if for screen that is not more than 767px */
+@media (max-width: 767px){
+  .website-contact-details{
+      width: 100%;
   }
-  footer::before{
-    top: 9rem;
+  .website-contact-wrapper,
+  .website-contact-form{
+      width: 100%;
+      height: inherit;
+      float: none;
   }
-  .footer-container .footer-header .footer-social-media{
-    margin-top: 1rem;
+  .website-contact-wrapper{
+      border-radius: 1.8rem 1.8rem 0rem 0rem;
   }
-  footer .footer-container .footer-logo .footer-information{
-    width: calc(100% / 2 - 0.6rem);
+  .form-field{
+      width: 100%;
+      float: none;
   }
-  footer .footer-container .footer-logo .input-box{
-    width: 100%;
+  .website-form-wrapper .form-field:last-child,
+  .submit-button{
+      width: 100%;
   }
+    .submit-button{
+      margin: 0.6rem 0rem;
+  } 
+
+} 
+/* This media querry if for screen that is not more than 900px */
+@media (max-width: 900px) {
+  footer .footer-container .footer-logo{
+   flex-wrap: wrap;
+ }
+ footer .footer-container .footer-logo .input-box{
+   width: 40%;
+   margin-top: 0.6rem;
+ } 
+ footer::before{
+   top: 5.3rem; 
+ }
+ .footer-container .footer-header .footer-header-name{
+   font-size: 0.6rem;
+ }
+ .footer-container .footer-header .footer-header-name .the_name{
+   font-size: 1.2rem;
+ }
+ .footer-container .footer-header .footer-social-media a{
+   font-size: 1.1rem;   
+ }
 }
-/* footer Ends*/

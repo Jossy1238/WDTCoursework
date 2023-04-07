@@ -340,24 +340,6 @@ main {
   
 }
 
-@media (max-width: 767px){
-  .developer-picture-wrapper{
-      width: 100%;
-
-  }
-  .developer-contact-details,
-  .website-contact-form{
-      width: 50%;
-      height: inherit;
-      float: none;
-  }
-  .developer-picture{
-      border-radius: 1.8rem 1.8rem 0rem 0rem;
-  }
-
-
-} 
-
 
 /* footer Starts*/
 footer{
@@ -555,34 +537,144 @@ footer .legal-info .legal-details{
 .legal-info .legal-details a{
   margin-right: 0.6rem;
 }
-/* This media querry if for screen that is not more than 900px */
-@media (max-width: 900px) {
-   footer .footer-container .footer-logo{
-    flex-wrap: wrap;
+
+
+/* This media querry if for screen that is not more than 520px */
+
+/* footer Ends */
+
+/*Media querries section*/
+/* This media querry if for screen that is not more than 520px */
+@media (max-width: 520px){
+  
+  footer::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5rem;
+    height: 0.063rem;
+    width: 100%;
+    background: #afafb6;
+    margin-top: 3em;
+  }
+  footer .footer-container .footer-header{
+    flex-direction: column;
+  }
+  footer::before{
+    top: 9rem;
+  }
+  .footer-container .footer-header .footer-social-media{
+    margin-top: 1rem;
+  }
+  footer .footer-container .footer-logo .footer-information{
+    width: calc(100% / 2 - 0.6rem);
   }
   footer .footer-container .footer-logo .input-box{
-    width: 40%;
-    margin-top: 0.6rem;
+    width: 100%;
+  }
+  /**Developer session*/
+  .developer-section{
+    width: 100%;
+  }
+  .developer-section .developer-section-container-1{
+    width: 100%;
   } 
-  footer::before{
-    top: 5.3rem; 
+  .developer-section-container-1 .developer-section-title{
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
-  .footer-container .footer-header .footer-header-name{
+  .developer-section-container-1 .developer-section-title h1{
+    font-size: 1.5rem;
+  }
+  .developer-section-container-1 .developer-section-title h1::after{
+    content: "";
+    height: 0.3rem;
+    width: 30%;
+    background-color: #1434A4;
+    border-radius: 1.6rem;
+  }
+  /*Write up styling*/
+  .developer-writeup-container {
+    border-radius: 0.2rem;
+  }
+  .developer-writeup h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 0.1rem 0.1rem 1rem #c9e6ff;
+  
+  }
+  .developer-writeup p {
+    font-size: 20px;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+  }
+  
+  /*For developers picture and socila media handles*/
+  #developer-sec-container-2{
+    width: 100%;
+  }
+  .developer-picture-wrapper{
+    position: relative;
+    display: flex;
+    width: 100%;
+    border-radius: 1.9rem;
+    margin-top: 1.9rem;
+    margin: auto;
+    height: 440px;
+  }
+  .developer-contact-details{
+    width: 50%;
+    height: 78vh;
+    padding: 1.0rem;
+    padding-top: 1.8rem;
+    border-radius: 1.8rem 1.8rem 1.8rem 1.8rem;
+  
+  }
+  .website-contact{
+    text-align: left;
+    font-size: 1.7rem;
+    letter-spacing: 0.03rem;
+  }
+  .contact-sub-title{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.6rem;
+  }
+  .developer-contact{
+    list-style: none;
+  } 
+  .developer-contact{
     font-size: 0.6rem;
+    padding-left: 0.001rem;
+    color: #fff;
   }
-  .footer-container .footer-header .footer-header-name .the_name{
-    font-size: 1.2rem;
+  .developer-contact li i{
+    padding: 0.3rem;
+    border-radius: 30%;
+    margin-right: 0.001rem;
   }
-  .footer-container .footer-header .footer-social-media a{
-    font-size: 1.1rem;   
+  .developer-social-handles{
+    margin: 0.5rem;
+    padding-top: 1rem;
   }
+  .developer-social-handles li i{
+    padding: 0.5rem;
+    font-size: 1.0rem;
+    border-radius: 20%;
+    margin: 0.2rem;
+  }
+ 
 }
 /* This media querry if for screen that is not more than 700px */
 @media (max-width: 700px) {
   footer{
     position: relative;
-    
-   }
+       }
   .footer-container .footer-header .footer-header-name{
     font-size: 1.6rem;
   }
@@ -605,22 +697,45 @@ footer .legal-info .legal-details{
   font-size: 0.75rem;
 }
 }
-/* This media querry if for screen that is not more than 520px */
-@media (max-width: 520px){
-  footer .footer-container .footer-header{
-    flex-direction: column;
+/* This media querry if for screen that is not more than 767px */
+
+@media (max-width: 767px){
+  .developer-picture-wrapper{
+      width: 100%;
+
   }
-  footer::before{
-    top: 9rem;
+  .developer-contact-details,
+  .website-contact-form{
+      width: 50%;
+      height: inherit;
+      float: none;
   }
-  .footer-container .footer-header .footer-social-media{
-    margin-top: 1rem;
+  .developer-picture{
+      border-radius: 1.8rem 1.8rem 0rem 0rem;
   }
-  footer .footer-container .footer-logo .footer-information{
-    width: calc(100% / 2 - 0.6rem);
-  }
-  footer .footer-container .footer-logo .input-box{
-    width: 100%;
-  }
+
+
+} 
+/* This media querry if for screen that is not more than 900px */
+@media (max-width: 900px) {
+  footer .footer-container .footer-logo{
+   flex-wrap: wrap;
+ }
+ footer .footer-container .footer-logo .input-box{
+   width: 40%;
+   margin-top: 0.6rem;
+ } 
+ footer::before{
+   top: 5.3rem; 
+ }
+ .footer-container .footer-header .footer-header-name{
+   font-size: 0.6rem;
+ }
+ .footer-container .footer-header .footer-header-name .the_name{
+   font-size: 1.2rem;
+ }
+ .footer-container .footer-header .footer-social-media a{
+   font-size: 1.1rem;   
+ }
 }
-/* footer Ends */
+
