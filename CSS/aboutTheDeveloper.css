@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
 body{
-    background-color: #3d64e6;
+    background-color: #F0FFFF;
 }
 .main-header{
     background-color: #000044;
@@ -95,7 +95,7 @@ nav img{
 /* Page introduction */
 main {
   width: 100%;
-  height: 85vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,170 +189,10 @@ main {
 }
 
 
-
-
-/*About the developer section*/
-/* .developer-section{
-  width: 100%;
-  background: whitesmoke;
-}
-.developer-section .developer-section-container-1{
-  width: 80%;
-  display: block;
-  margin: 0px auto;
-  padding: 50px 0px;
-} 
-.developer-section-container-1 .developer-section-title{
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-}
-.developer-section-container-1 .developer-section-title h1{
-  text-transform: uppercase;
-  font-size: 35px;
-  color: #88941e;
-}
-.developer-section-container-1 .developer-section-title h1::after{
-  content: "";
-  height: 5px;
-  width: 30%;
-  background-color: #c4d156;
-  border-radius: 25px;
-  display: block;
-  margin: auto;
-}
-
-
-/*Developer img and contact Section 
-#developer-sec-container-2{
-  background: #000044;
-  width: 100%;
-  padding: 10px;
-}
-.developer-picture-wrapper{
-  position: relative;
-  display: flex;
-  width: 100%;
-  border-radius: 30px;
-  margin-top: 30px;
-  margin: auto;
-  height: 440px;
-}
-
-.developer-picture{
-  width: 30%;
-  height: 430px;
-  padding: 40px 25px 35px 25px;
-  border-radius: 0px 30px 30px 0px;
-  /* background: #ecf0f3; 
-}
- .the-pics{
-  min-width: 100%;
-  height: 27em;
-  
-}
-.developer-contact-details{
-  width: 50%;
-  height: 430px;
-  padding: 20px;
-  padding-top: 30px;
-  border-radius: 30px 0px 0px 30px;
-  background: linear-gradient(144deg, rgba(126,39,156,1)0%, rgba(49,39,157,1)100%);
-  color: #fff;
-
-}
-.developer-contact-title{
-  text-align: left;
-  font-size: 28px;
-  letter-spacing: 0.5px;
-}
-.contact-sub-title{
-  font-size: 18px;
-  font-weight: 300;
-  margin-top: 17px;
-  letter-spacing: 0.5px;
-  line-height: 26px;
-}
-.developer-contact{
-  list-style: none;
-  /* margin: 60px 0px; 
-} 
-.developer-contact{
-  margin-top: 25px;
-  font-size: 18px;
-  color: #fff;
-}
-.developer-contact li i{
-  /* background: #F44770; 
-  padding: 8px;
-  border-radius: 40%;
-  margin-right: 2px;
-}
-.developer-contact li a{
-  color: #fff;
-  text-decoration: none;  
-}
-.developer-contact li a:hover{
-  color: #F44770;
-}
-.developer-social-handles{
-  list-style: none;
-  text-align: center;
-  margin: 20px 0px;
-}
-.developer-social-handles li{
-  display: inline-block;
-}
-.developer-social-handles li i{
-  background: #F44770;
-  color: #fff;
-  padding: 15px;
-  font-size: 20px;
-  border-radius: 22%;
-  margin: 0px 5px;
-  cursor: pointer;
-  transition: all 5s;
-}
-.developer-social-handles li i:hover{
-  background: #fff;
-  color: #000;
-}
-
-
-@media (max-width: 767px){
-  .developer-picture-wrapper{
-      width: 50%;
-
-  }
-  .developer-contact-details,
-  .developer-picture{
-      width: 100%;
-      height: inherit;
-      float: none;
-  }
-  .developer-contact-details{
-      border-radius: 1.8rem 1.8rem 0rem 0rem;
-  }
-  
-  .form-group{
-      width: 100%;
-      float: none;
-  }
-  .form-field .form-group:last-child,
-  .submit-button{
-      width: 100%;
-  }
-    .submit-button{
-      margin: 0.6rem 0rem;
-  } 
-
-}*/
-
-
 /*About the developer section*/
  .developer-section{
   width: 100%;
-  background: whitesmoke;
+  background: #F0F8FF;
 }
 .developer-section .developer-section-container-1{
   width: 80%;
@@ -368,16 +208,39 @@ main {
 .developer-section-container-1 .developer-section-title h1{
   text-transform: uppercase;
   font-size: 2.1rem;
-  color: #88941e;
+  color: #6F8FAF;
 }
 .developer-section-container-1 .developer-section-title h1::after{
   content: "";
   height: 0.3rem;
   width: 30%;
-  background-color: #c4d156;
+  background-color: #1434A4;
   border-radius: 1.6rem;
   display: block;
   margin: auto;
+}
+/*Write up styling*/
+.developer-writeup-container {
+  /* background-color: #f7f7f7; */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.developer-writeup h3 {
+  color: #4b4b4b;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 2px #c9e6ff;
+
+}
+
+.developer-writeup p {
+  color: #4b4b4b;
+  font-size: 20px;
+  line-height: 1.5;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 /*For developers picture and socila media handles*/
@@ -412,9 +275,10 @@ main {
   letter-spacing: 0.03rem;
 }
 .contact-sub-title{
-  font-size: 1.8rem;
+  font-size: 1.1rem;
   font-weight: 300;
-  margin-top: 1.1rem;
+  margin-top: 1.2rem;
+  margin-left: 0.5rem;
   letter-spacing: 0.03rem;
   line-height: 1.6rem;
 }
@@ -438,10 +302,12 @@ main {
 .developer-contact li a:hover{
   color: #F44770;
 }
+
 .developer-social-handles{
   list-style: none;
   text-align: center;
   margin: 1.2rem 0rem;
+  padding-top: 4rem;
 }
 .developer-social-handles li{
   display: inline-block;

@@ -29,7 +29,7 @@
 <body>
 
 
-  <section class="main-header">
+  <header class="main-header">
     <nav class="navigation-menu">
       <a href="../HTML/index.html"> <img src="../Images/Logo.png"></a>
       <ul class="navigation-list">
@@ -53,16 +53,16 @@
       </div>
     </nav>
 
-  </section>
-
-  <header>
-    <h1>Cost of Living Comparison</h1>
   </header>
 
 
+  <section class="Page-title" >
+    <h1>Cost of Living Across various Cities In The World...</h1>
+  </section>
+
   <main>
-    <section id="comparison-form">
-      <h2>Enter two cities to compare the cost of living:</h2>
+    <section id="comparison-form" >
+      <h2>Enter two Cities and their Countries to compare the Cost of Living!</h2>
       <form id="compare-form">
         <label for="country1">Country 1:</label>
         <input type="text" id="country1" name="country1" placeholder="E.g Abuja/Nigeria" />
@@ -71,13 +71,8 @@
         <input type="text" id="country2" name="country2" placeholder="E.g Accra/Ghana" />
 
         <button type="submit" id="compare-btn">Compare</button>
-
       </form>
-
     </section>
-    <!-- <section id="comparison-result">
-          <h2 id="result-heading">Comparison Result:</h2>
-        </section> -->
   </main>
 
   <div id="loader" class="d-none"></div>
@@ -92,11 +87,11 @@
           <span class="the_name">Social media handles</span>
         </div>
         <div class="footer-social-media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a target="_blank" href="https://www.facebook.com/ekhator.josephine.79/"><i class="fab fa-facebook-f"></i></a>
+          <a target="_blank" href="https://twitter.com/nationekhator"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.instagram.com/nationjossy/"><i class="fab fa-instagram"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/josephine-nation-ekhator-211787225/"><i class="fab fa-linkedin-in"></i></a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=se13EO2wVt0"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
       <div class="footer-logo">
@@ -125,9 +120,10 @@
           </p>
         </ul>
         <ul class="footer-information input-box">
+          <h6 class="d-none subscribe text-white">You have sucessfully subscribed </h6>
           <li class="info-per-column">Subscribe</li>
-          <li><input type="text" placeholder="Enter your email"></li>
-          <li><input type="button" value="Subscribe"></li>
+          <li><input type="email" placeholder="Enter your email" id="sub-text" required></li>
+          <li><input type="button" value="Subscribe" id="sub-btn"></li>
         </ul>
       </div>
     </div>

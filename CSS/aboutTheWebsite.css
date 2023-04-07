@@ -5,7 +5,7 @@
     box-sizing: border-box;
   }
 body{
-  background-color: #3d64e6;
+  background-color: #F0FFFF;
 }
 .main-header{
   background-color: #000044;
@@ -95,7 +95,7 @@ nav img{
 /* Page introduction */
 main {
   width: 100%;
-  height: 85vh;
+  height: 55vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +129,6 @@ main {
   padding: 0.75rem 1.87rem;
   border-radius: 0.25rem;
   outline: none;
-  /* text-transform: uppercase; */
   font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
@@ -192,7 +191,7 @@ main {
 .website-information{
     width: 100%;
     height: 53vh;
-    background: #010143;
+    background: #1434A4;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -218,7 +217,7 @@ main {
 
 /*Website contact information*/
 #website-contact-info{
-    background: #000044;
+    background: #00008B;
     width: 100%;
     padding: 0.6rem;
 }
@@ -233,7 +232,7 @@ body, input, textarea, a{
     border-radius: 1.9rem;
     margin-top: 1.9rem;
     margin: auto;
-    height: 440px;
+    height: 78vh;
 }
 .website-contact-wrapper{
     width: 40%;
@@ -251,9 +250,10 @@ body, input, textarea, a{
     letter-spacing: 0.5px;
 }
 .website-contact-sub-title{
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    margin-top: 1.1rem;
+    margin-top: 1.2rem;
+    margin-left: 0.5rem;
     letter-spacing: 0.03rem;
     line-height: 1.6rem;
 }
@@ -283,6 +283,8 @@ body, input, textarea, a{
     list-style: none;
     text-align: center;
     margin: 1.2rem 0rem;
+    padding-top: 4rem;
+
 }
 .website-social-handles li{
     display: inline-block;
@@ -306,7 +308,7 @@ body, input, textarea, a{
 
 .website-contact-form{
     width: 60%;
-    height: 76vh;
+    height: 78vh;
     padding: 2.5rem 1.5rem 2.1rem 1.5rem;
     border-radius: 0rem 1.8rem 1.8 0rem;
     background: #ecf0f3;

@@ -35,3 +35,19 @@ $('.testimonials-container').owlCarousel({
         },
     }
 })
+/**/
+
+let subInput = document.getElementById('sub-text');
+let subButton = document.getElementById('sub-btn');
+let SuccessMessage = document.querySelector('.subscribe');
+
+subButton.addEventListener("click", () => {
+    if (subInput.value!=""){
+        SuccessMessage.classList.remove('d-none');
+        subInput.value="";
+
+    setTimeout(() =>
+     {SuccessMessage.classList.add("d-none")}, 2000);
+    }
+    
+} )

@@ -56,6 +56,15 @@ formcompare.addEventListener("submit", async (event) => {
     </div>
   </div>
 `;
+    
+    let accordionHeaders = document.getElementsByClassName('accordion');
+      Array.from(accordionHeaders).forEach(header => {
+        header.addEventListener('click', () => {
+          let panel = header.nextElementSibling;
+          panel.classList.toggle('d-none');
+          header.classList.toggle('active');
+        });
+      });
 
 });
 
@@ -99,8 +108,8 @@ const searchCostOfLiving = (city, country) => {
           result += `
             ${typeof countryInfo[key] === 'object' ? `
               <div class="mb-5">
-                <h5 class="mb-1 fw-bold">${key}</h5>
-                  <table class="table table-striped table-bordered border-secondary">
+                <h5 class="mb-1 fw-bold content accordion">${key}</h5>
+                  <table class="table table-striped table-bordered border-secondary panel d-none">
                       <thead>
                         <tr>
                           <th scope="col">Item</th>
@@ -123,22 +132,27 @@ const searchCostOfLiving = (city, country) => {
               </div>`
             }
           `;
+        
         }
       }
       result += '</div>';
+      
       return result;
     })
     .catch(err => console.error(err));
 };
+  /*Code for subscribe us button */
+  let subInput = document.getElementById('sub-text');
+  let subButton = document.getElementById('sub-btn');
+  let SuccessMessage = document.querySelector('.subscribe');
 
+  subButton.addEventListener("click", () => {
+      if (subInput.value!=""){
+          SuccessMessage.classList.remove('d-none');
+          subInput.value="";
 
-
-
-
-
-
-
-
-
-
-
+      setTimeout(() =>
+        {SuccessMessage.classList.add("d-none")}, 2000);
+      }
+      
+  } )

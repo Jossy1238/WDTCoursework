@@ -1,4 +1,4 @@
-//script for Header section 
+/*Script for Header section*/
 const hamburger = document.querySelector('.mobile-view');
 const navMenu = document.querySelector('.navigation-list');
 
@@ -9,13 +9,14 @@ hamburger.addEventListener("click", () => {
 document.querySelectorAll(".navigation-field").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-}))
+}));
 
 
 
 //script displaying country's details
 let searchBtn = document.getElementById("search-btn");
 let countryInp = document.getElementById("country-inp");
+let result = document.getElementById('result');
 const cuntriesMap = (lat, long, country ) =>{
     var map = L.map('map').setView([lat, long], 5);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -26,22 +27,26 @@ const cuntriesMap = (lat, long, country ) =>{
         .openPopup();
 }
 searchBtn.addEventListener("click", () => {
+  result.classList.add('d-none');
   let countryName = countryInp.value;
+  console.log(countryName);
   let finalURL = `https://restcountries.com/v3.1/name/${countryName}?fullText=true`;
   console.log(finalURL);
   fetch(finalURL)
     .then((response) => response.json())
     .then((data) => {
-    console.log(data);
-    result.classList.remove("hidden");   
+
+    console.log(data[0].borders);
+
+    result.classList.remove("d-none");   
     result.innerHTML = `
         <div class="search">
             <div class="left">
-                <img src="${data[0].flags.svg}" class="flag-img">
                 <h2>${data[0].name.common}</h2>
+                <img src="${data[0].flags.svg}" class="flag-img">
                 <div class="wrapper">
                     <div class="data-wrapper">
-                        <h4>Capital: <span>${data[0].capital[0]}</span></h4> 
+                        <h4>Capital City: <span>${data[0].capital[0]}</span></h4> 
                     </div>
                 </div>
                 <div class="wrapper">
@@ -75,6 +80,7 @@ searchBtn.addEventListener("click", () => {
                     <img src="${data[0].coatOfArms.svg}" class="flag-img">
                 </div> 
             </div>
+            
           <div class="right">
              <div class="wrapper">
              <div class="data-wrapper">
@@ -109,17 +115,20 @@ searchBtn.addEventListener("click", () => {
                
                </div>
            </div>
-           <div class="wrapper">
+
+            <div class="wrapper ${data[0].borders ? "d-block" : "d-none"}">
                     <div class="data-wrapper">
-                        <h4>Borders with other countries: <span>${Object.values(data[0].borders)
-                          .toString()
+                        <h4>Borders with other countries: <span>${data[0].borders &&
+                          Object.values(data[0].borders).toString()
                           .split(",")
                           .join(", ")}</span>
                           </h4>  
                     </div>
             </div>
+
             <div class="wrapper">
                     <div class="data-wrapper">
+                    <h4>Location on the map:</h4>
                         <div id="map"> </div>
                     </div>
             </div>
@@ -129,7 +138,8 @@ searchBtn.addEventListener("click", () => {
       `;
       cuntriesMap(data[0].latlng[0], data[0].latlng[1], data[0].capital[0]);
     })
-    .catch(() => {
+    .catch((error) => {
+      console.log(error);
       if (countryName.length == 0) {
         result.innerHTML = `<h3>The input field cannot be empty</h3>`;
       } else {
@@ -137,7 +147,7 @@ searchBtn.addEventListener("click", () => {
       }
     // hide the error after 3 seconds
     setTimeout(() => {
-      result.classList.add('hidden');
+      result.classList.add('d-none');
      }, 3000);
     });
 });
@@ -152,7 +162,9 @@ searchBtn.addEventListener("click", () => {
     const continents = {};
     let out ='';
     data.forEach(country => {
-      out += `<option value=${country.name.common} />`
+      out += `<option value=${country.name.common}>  ${country.name.common}</option>  `
+
+
       const continent = country.region;
       if (continent in continents) {
         continents[continent] += 1;
@@ -195,3 +207,19 @@ searchBtn.addEventListener("click", () => {
   .catch(error => {
     console.error('Error:', error);
   });
+
+  /*Code for subscribe us button */
+  let subInput = document.getElementById('sub-text');
+  let subButton = document.getElementById('sub-btn');
+  let SuccessMessage = document.querySelector('.subscribe');
+
+  subButton.addEventListener("click", () => {
+      if (subInput.value!=""){
+          SuccessMessage.classList.remove('d-none');
+          subInput.value="";
+
+      setTimeout(() =>
+        {SuccessMessage.classList.add("d-none")}, 2000);
+      }
+      
+  } )

@@ -5,7 +5,8 @@
     box-sizing: border-box;
 }
 body{
-  background-color: #3d64e6;
+  background-color: #F0FFFF;
+  
 }
 .main-header{
   background-color: #000044;
@@ -95,12 +96,14 @@ nav img{
 /* Page introduction */
 main {
   width: 100%;
-  height: 85vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   color: white;
+  padding-top: 5rem;  
+
   /* margin-top: 10rem; */
 }
 .about-us-intro h3 {

@@ -66,23 +66,17 @@
       </div>
     </nav>
 
-  </section>
-  <!-- The webpage introduction section-->
-  <!-- <div class="country-introduction"> -->
-    <!-- This code creates a section with the class "contact-me" 
-          and displays information about the benefits of checking for countries details. -->
-    <!-- <h1>Countries Details!</h1>
-    <p>Checking for countries details can be a valuable way to expand your knowledge,
-      increase your understanding of the world,
-      and make better decisions in various areas of your life.
-      It can challenge your assumptions and biases, broaden your horizons for better decision-making.
-    </p>
-  </div> -->
+  </section> 
 
   <!-- Search Countries Details Session-->
   <main>
     <!-- This code creates a main section with a container div and a search-wrapper div. -->
+    <div class="country-introduction pt-5">
+    <!-- The webpage introduction section-->
+     <h1>Know More About Your Preferred Countries-Details!!</h1>
+   </div>
     <div class="container">
+      
       <div class="search-wrapper">
         <input list="countries" type="text" id="country-inp" placeholder="Enter a country name here..." />
         <button id="search-btn">Search</button>
@@ -90,7 +84,7 @@
       </div>
     </div>
   </main>
-  <div id="result"></div>
+  <div id="result" class="d-none"></div>
 
   <!-- The session for displaying the total number of countries per continent-->
   <section class="column-container">
@@ -112,11 +106,11 @@
           <span class="the_name">Social media handles</span>
         </div>
         <div class="footer-social-media">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a target="_blank" href="https://www.facebook.com/ekhator.josephine.79/"><i class="fab fa-facebook-f"></i></a>
+          <a target="_blank" href="https://twitter.com/nationekhator"><i class="fab fa-twitter"></i></a>
+          <a target="_blank" href="https://www.instagram.com/nationjossy/"><i class="fab fa-instagram"></i></a>
+          <a target="_blank" href="https://www.linkedin.com/in/josephine-nation-ekhator-211787225/"><i class="fab fa-linkedin-in"></i></a>
+          <a target="_blank" href="https://www.youtube.com/watch?v=se13EO2wVt0"><i class="fab fa-youtube"></i></a>
         </div>
       </div>
       <div class="footer-logo">
@@ -145,9 +139,10 @@
           </p>
         </ul>
         <ul class="footer-information input-box">
+          <h6 class="d-none subscribe text-white">You have sucessfully subscribed </h6>
           <li class="info-per-column">Subscribe</li>
-          <li><input type="text" placeholder="Enter your email"></li>
-          <li><input type="button" value="Subscribe"></li>
+          <li><input type="email" placeholder="Enter your email" id="sub-text" required></li>
+          <li><input type="button" value="Subscribe" id="sub-btn"></li>
         </ul>
       </div>
     </div>

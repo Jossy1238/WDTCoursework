@@ -5,12 +5,13 @@
     box-sizing: border-box;
 }
 body{
-  background-color: #3d64e6;
+  background-color: #F0FFFF;
 }
 .main-header{
   background-color: #000044;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
+  z-index: 50;
 }
 li{
   list-style: none;
@@ -92,59 +93,47 @@ nav img{
   }
 }
 
-/*The webpage introduction section*/
-/* .country-introduction{
-    width: 100%;
-    height: 60vh;
-    background: black;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url(../Images/oj0m9qauirv61.jpg);
+/*Countries information section*/
+main {
+  width: 100%;
+  height: 85vh;
+  align-items: center;
+  text-align: center;
+  background: #ffffff url("../Images/546678.jpg")  no-repeat center ;
+  position: relative;
+  padding-top: 5.5rem;
+
+}
+main::before {
+  content: "";
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  bottom: 0rem;
+  left: 0rem;
+
+}
+.country-introduction{
+  background-color: rgba(0,0,0,0.4);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 60vh;
 }
 .country-introduction h1{
-    color: white;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1.6rem;
-    margin-top: 0.6rem;
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.6rem;
+  padding-top: 2.5rem;
 }
-.country-introduction p{
-    color: white;
-    font-size: 0.9rem;
-    font-weight: bold;
-    margin-bottom: 1.6rem;
-    padding-left: 6.2rem;
-    padding-right: 6.2rem;
-    align-content: center;
-    align-items: center;
-}
-@media(max-width:768px){
-  .contact-me{
-    width: 100%;
 
-  }
-  .contact-me h1{
-    margin-top: 4.3rem;
-  }
-  .contact-me p{
-    margin-bottom: 1.6rem;
-    padding-left: 3.1rem;
-    padding-right: 3.1rem;
-  }
+.country-introduction h1 {
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  /* .country-introduction p */
+  width: 70%;
+  margin: 0 auto;
 
-} */
-
-/*Countries information section*/
-  main {
-    width: 100%;
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background-image: url(../Images/929018.jpg);
 }
 .container{
     background: whitesmoke;
@@ -153,7 +142,7 @@ nav img{
     padding: 3em 2.5em;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 60%;
+    top: 80%;
     left: 50%;
     border-radius: 0.62em;
     box-shadow: 0 0.19rem 0.25rem rgba(8, 21, 65, 0.25); 
@@ -246,6 +235,28 @@ nav img{
 .right{
   width: 50%;
 }
+.left h4{
+  color: #0077B5;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.left h4 span {
+  font-weight: bold;
+  color: #0077B5;
+  font-size: 28px;
+  text-shadow: none;
+  margin-left: 5px;
+}
+.left h2{
+  color: #0077B5;
+  /* font-size: 24px; */
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
 .left{
   padding-left: 3rem;
   padding-right: 1rem;
@@ -253,11 +264,27 @@ nav img{
 .right{
   padding-right: 1rem;
 }
+.right h4{
+  color: #0077B5;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+.righ h4 span {
+  font-weight: bold;
+  color: #0077B5;
+  font-size: 28px;
+  text-shadow: none;
+  margin-left: 5px;
+}
 .flag-img{
   width: 50%;
   height: auto;
 }
-
+#map{
+  width: 100%;
+  z-index: -50;
+}
 
 /* CSS for chart bar*/
 .chart-container {

@@ -5,12 +5,13 @@
   box-sizing: border-box;
 }
 body{
-  background-color: #3d64e6;
+  background-color: #F0FFFF;
 }
 .main-header{
   background-color: #000044;
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
+  z-index: 50;
 }
 li{
   list-style: none;
@@ -94,11 +95,14 @@ nav img{
 
 
 /* Center the comparison-form section */
-header {
-	background-color: #333;
-	color: #fff;
-	padding: 0.62rem;
-	text-align: center;
+.Page-title {
+	/* background-color: #333; */
+	color: black;
+  padding: 0.62rem;
+  text-align: center;
+  padding-top: 7rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);  
 }
 h1 {
 	margin: 0;
@@ -117,6 +121,15 @@ main {
   padding: 1.25rem;
   background-color: #f5f5f5;
   box-shadow: 0 0 0.6rem rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+}
+#comparison-form h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 /* Style the form inputs */
@@ -131,17 +144,28 @@ main {
   max-width: 71vh;
 }
 
-/* Style the form button */
+/* Style the form button*/
 #compare-btn {
-  background-color: #4CAF50;
+  background-color: #1434A4;
   color: white;
   cursor: pointer;
+  border: 2px solid #1434A4;
+  border-radius: 0.1rem;
+  margin: 20px auto 0;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+#compare-btn:hover {
+  background-color: #0c265e;
+  transform: translateY(-2px);
 }
 
 /* Style the loader */
 #loader {
   border: 1rem solid #f3f3f3;
-  border-top: 1rem solid #4CAF50;
+  border-top: 1rem solid #1434A4;
   border-radius: 50%;
   width: 7.5rem;
   height: 7.5rem;
@@ -178,14 +202,48 @@ main {
   100% { transform: rotate(360deg); }
 }
 
+/* accordion from customization from cost of living js */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+ 
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion .active:hover, .accordion:hover {
+  background-color: #ccc;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
 
-
-
-
-
-
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+.show .panel {
+  max-height: 500px;
+}
 
 
 /* footer Starts*/
